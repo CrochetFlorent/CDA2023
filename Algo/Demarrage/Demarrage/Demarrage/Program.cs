@@ -1,11 +1,13 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Collections;
+using System.Runtime.CompilerServices;
+using System.Runtime.ExceptionServices;
 
 namespace Demarrage
 {
     internal class Program
     {
+        //Exercices #1
         //Partie 1
-        
         public static void moyenne()
         {
             int nb1, nb2;
@@ -189,7 +191,6 @@ namespace Demarrage
             string saisie = Console.ReadLine();
             annee = int.Parse(saisie);
 
-            
             if ((annee % 4 != 0) || (annee%4 == 0 && annee%100 == 0 && annee%400 != 0))
             {
                 Console.WriteLine("Pas bissextile");
@@ -359,25 +360,173 @@ namespace Demarrage
             Console.WriteLine(" Entrez un nombre.");
             int nb = int.Parse(Console.ReadLine());
             bool test = false;
+            int i;
 
-            for (int i = 0; i < tab.Length; i++)
+            for (i = 0; i < tab.Length; i++)
             {
                 if (tab[i] == nb)
                 {
-                    Console.WriteLine("Le nombre appartient au tableau.");
-                    i = tab.Length;
                     test = true;
-                }
-                else
-                {
+                }     
+            }
+            if (test)
+            {
+                Console.WriteLine("Le nombre appartient au tableau.");
+            }
+            else
+            {
+                Console.WriteLine("404 No Found.");
+            }
+        }
 
+        //Exercices #2
+        //Partie 4
+
+        public static void parfait()
+        {
+            var diviseurs = new List<int>();
+            var parfaits = new List<int>();
+
+             int somme = 0, c = 1, nb=0,n;
+            Console.WriteLine("Entrez combien de nombres parfaits vous voulez trouver, jusqu'a 4 maximum.");
+            n = int.Parse(Console.ReadLine());
+            
+            while (nb<n)
+            {
+                c++;
+                somme = 0;
+                for (int i = 1; i <= c/2 ; i++)
+                {
+                    if(c%i==0)
+                    {
+                        diviseurs.Add(i);
+                        somme = somme + i;
+                    }
+                }
+
+                if (somme == c)
+                {
+                    Console.WriteLine(c+ " est un nombre parfait.");
+                    nb++;
+                }
+
+            }
+             
+        }
+
+        public static void palindrome()
+        {
+            string  first, second;
+
+            Console.WriteLine("Taper une phrase, est-ce un palindrome?");
+            first= Console.ReadLine().Replace(" ", "");
+
+            char[] charArray = first.ToCharArray();
+            Array.Reverse(charArray);
+
+            second = new string(charArray);
+
+            if (first.Equals(second))
+            {
+                Console.WriteLine("C'est un palindrome.");
+            }else
+            {
+                Console.WriteLine(" Ceci n'est pas un palindrome.");
+            }
+        }
+
+        //Ne fonctionne pas si deux valeurs identiques dans le tableau
+        public static void triCroissantTab()
+        {
+            int[] tab= { 2, 5, 15, 3, 18, 19, 17, 4, 8, 5, 65, 25, 48 };
+            int stock;
+
+            for(int i = 0; i < tab.Length; i++)
+            {
+                for (int j = 1; j < tab.Length; j++)
+                {
+                        if (tab[j] < tab[j - 1])
+                        {
+                            stock = tab[j - 1];
+                            tab[j-1] = tab[j];
+                            tab[j] = stock;  
+                        }
                 }
             }
+            for (int i = 0; i < tab.Length; i++)
+            {
+                Console.WriteLine(tab[i]);
+            }
+        }
+
+        public static void pendu()
+        {
+            string mot1, mot2 = "";
+            char lettre;
+            int essais1 = 0, essais2 = 0;
+            bool test;
+
+
+            do
+            {
+                Console.WriteLine("Entrer un mot");
+                mot1 = Console.ReadLine();
+            } while (mot1.Length < 5);
+
+            char[] tabChar1 = mot1.ToCharArray();
+            char[] tabChar2 = mot1.ToCharArray();
+
+            for (int i = 0; i < tabChar2.Length; i++)
+            {
+                if (i!=0 && i!= tabChar2.Length-1)
+                {
+                    tabChar2[i] = '_';
+                }
+            }
+            
+            mot2 = new String(tabChar2);
+            Console.WriteLine(mot2);
+                do
+                {
+                    test = false;
+                    Console.WriteLine("Supposez une lettre.");
+                    lettre = char.Parse(Console.ReadLine());
+
+                    for (int i = 1; i < tabChar1.Length-1; i++)
+                    {
+                        if (lettre == tabChar1[i])
+                        {
+                            tabChar2[i] = lettre;
+                            test = true;
+                        }
+                    }
+
+                    if(!test)
+                    {
+                        essais1++;
+                    }
+                    
+                    essais2++;
+
+                    mot2 = new string(tabChar2);
+                    Console.WriteLine(mot2);
+                }
+                while (!mot1.Equals(mot2) && essais1 !=6);
+
+            if (mot1.Equals(mot2))
+            {
+                Console.WriteLine("Vous avez trouvé en " + essais2+" lettres.");
+            }
+            else
+            {
+                Console.WriteLine("Vous avez dépassé le nombre d'essais autorisés : 6.Le mot était "+mot1+".");
+            }
+
         }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-            RechercheTableau();
+            pendu();
         }
     }
 }
