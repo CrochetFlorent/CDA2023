@@ -8,7 +8,7 @@ namespace Demarrage
     {
         //Exercices #1
         //Partie 1
-        public static void moyenne()
+        public static void Moyenne()
         {
             int nb1, nb2;
 
@@ -21,10 +21,9 @@ namespace Demarrage
 
             int moyenne = (nb1 + nb2) / 2;
             Console.WriteLine("La moyenne de " + nb1 + " et " + nb2 + " est " + moyenne);
-
         }
 
-        public static void aire()
+        public static void Aire()
         {
             double aire, rayon, volume;
 
@@ -38,14 +37,14 @@ namespace Demarrage
             Console.WriteLine("L'aire de la sphère est de " + aire + " et le volume de " + volume);
         }
 
-        public static void surface()
+        public static void Surface()
         {
             double rayon, angle, surface;
 
             Console.WriteLine("Entrer le rayon d'un secteur circulaire");
             string saisie = Console.ReadLine();
             rayon = int.Parse(saisie);
-            Console.WriteLine("Entrez l'anlg eu secteur");
+            Console.WriteLine("Entrez l'anlge du secteur");
             saisie = Console.ReadLine();
             angle = int.Parse(saisie);
 
@@ -53,7 +52,7 @@ namespace Demarrage
             Console.WriteLine("L'aire du secteur est "+ surface);
         }
 
-        public static void interets(){
+        public static void Interets(){
 
             double somme, interet, nbAnnees;
 
@@ -71,10 +70,9 @@ namespace Demarrage
             double interetCompose = Math.Round(somme*Math.Pow((1 + (interet/100)),nbAnnees)*100)/100;
 
             Console.WriteLine("Interet Simple = " + interetSimple + " et interet composé = " + interetCompose);
-
         }
 
-        public static void inversion()
+        public static void Inversion()
         {
             int a, b, c;
 
@@ -96,7 +94,7 @@ namespace Demarrage
 
         //Partie 2
 
-        public static void comparaison()
+        public static void Comparaison()
         {
             int a;
 
@@ -118,7 +116,7 @@ namespace Demarrage
             }
         }
 
-        public static void tri()
+        public static void TriDeux()
         {
             int a, b;
 
@@ -144,7 +142,7 @@ namespace Demarrage
             }
         }
 
-        public static void triTrois()
+        public static void TriTrois()
         {
             int a, b, c;
 
@@ -160,30 +158,31 @@ namespace Demarrage
 
             if (a > b && b > c)
             {
-                Console.WriteLine(c + ">" + b + ">" + a);
+                Console.WriteLine(c + "<" + b + "<" + a);
             }
-            else if (a > c && c > b)
+            else if (c > b && b > a)
             {
-                Console.WriteLine(b + ">" + c + ">" + a);
+                Console.WriteLine(a + "<" + b + "<" + c);
+
             }
             else if (b > a && a > c)
             {
-                Console.WriteLine(c + ">" + a + ">" + b);
+                Console.WriteLine(c + "<" + a + "<" + b);
             }
-            else if (c> a && a > b)
+            else if (c > a && a > b)
             {
-                Console.WriteLine(b + ">" + a + ">" + c);
+                Console.WriteLine(b + "<" + a + "<" + c);
             }
-            else if (a > b && b > c)
+            else if (a > c && c > b)
             {
-                Console.WriteLine(c + ">" + b + ">" + a);
+                Console.WriteLine(b + "<" + c + "<" + a);
             }
             else 
             {
-                Console.WriteLine(a + ">" + b + ">" + c);
+                Console.WriteLine(a + "<" + c + "<" + b);
             }
         }
-        public static void bissext()
+        public static void Bissext()
         {
             int annee;
                
@@ -201,7 +200,7 @@ namespace Demarrage
             }
         }
 
-        public static void diviseurs()
+        public static void Diviseurs()
         {
             int nb;
 
@@ -218,7 +217,7 @@ namespace Demarrage
             }
         }
 
-        public static void premier()
+        public static void Premier()
         {
             int nb, test = 0;
 
@@ -233,6 +232,7 @@ namespace Demarrage
                     test += 1;
                 }
             }
+
             if (test == 0)
             {
                 Console.WriteLine(nb+" est premier.");
@@ -243,7 +243,7 @@ namespace Demarrage
             }
         }
 
-        public static void conversion()
+        public static void Conversion()
         {
             double valeur;
             double miles;
@@ -270,6 +270,7 @@ namespace Demarrage
                         valeur = double.Parse(saisie);
                     }
                 }
+
                 miles = valeur * 0.621;
                 Console.WriteLine("En miles :" + miles);
             }
@@ -279,16 +280,15 @@ namespace Demarrage
 
         public static void RechercheDeLettre()
         {
-            int nbLettre = 0;
+            int nbLettre ;
             string fin = "";
-            string str = "";
+            string str ;
 
             while(!fin.Equals("q"))
             {
                 Console.WriteLine("Tapez une phrase.");
                 str = Console.ReadLine();
 
-                
                 Console.WriteLine("Entrez une lettre.");
                 string lettre = Console.ReadLine();
 
@@ -308,10 +308,10 @@ namespace Demarrage
             }
         }
 
-        public static void barnabe()
+        public static void Barnabe()
         {
             int nbMagasins = 0;
-            Random r = new Random();
+            Random r = new ();
             double somme = r.Next(20, 150);
             Console.WriteLine("Barnabe dispose de " + somme + " euros.");
             while (somme != 0)
@@ -327,12 +327,13 @@ namespace Demarrage
                     nbMagasins += 1;
                 }
             }
+
             Console.WriteLine("Barnabe est passé dans " + nbMagasins + " magasins.");
         }
 
-        public static void fourchette()
+        public static void Fourchette()
         {
-            Random r = new Random();
+            Random r = new ();
             int nbAlea = r.Next(0, 100);
             int nb, min = 0, max = 100;
             int essais = 0;
@@ -351,6 +352,7 @@ namespace Demarrage
                 }
                 essais += 1;
             } while (nb != nbAlea);
+
             Console.WriteLine("Vous avez reussi en " + essais + " essai(s).");
         }
 
@@ -382,12 +384,11 @@ namespace Demarrage
         //Exercices #2
         //Partie 4
 
-        public static void parfait()
+        public static void Parfait()
         {
             var diviseurs = new List<int>();
-            var parfaits = new List<int>();
 
-             int somme = 0, c = 1, nb=0,n;
+             int somme , c = 1, nb=0,n;
             Console.WriteLine("Entrez combien de nombres parfaits vous voulez trouver, jusqu'a 4 maximum.");
             n = int.Parse(Console.ReadLine());
             
@@ -400,7 +401,7 @@ namespace Demarrage
                     if(c%i==0)
                     {
                         diviseurs.Add(i);
-                        somme = somme + i;
+                        somme += i;
                     }
                 }
 
@@ -409,12 +410,10 @@ namespace Demarrage
                     Console.WriteLine(c+ " est un nombre parfait.");
                     nb++;
                 }
-
-            }
-             
+            }       
         }
 
-        public static void palindrome()
+        public static void Palindrome()
         {
             string  first, second;
 
@@ -429,14 +428,15 @@ namespace Demarrage
             if (first.Equals(second))
             {
                 Console.WriteLine("C'est un palindrome.");
-            }else
+            }
+            else 
             {
                 Console.WriteLine(" Ceci n'est pas un palindrome.");
-            }
+            }       
         }
 
         //Ne fonctionne pas si deux valeurs identiques dans le tableau
-        public static void triCroissantTab()
+        public static void TriCroissantTab()
         {
             int[] tab= { 2, 5, 15, 3, 18, 19, 17, 4, 8, 5, 65, 25, 48 };
             int stock;
@@ -453,19 +453,19 @@ namespace Demarrage
                         }
                 }
             }
+
             for (int i = 0; i < tab.Length; i++)
             {
                 Console.WriteLine(tab[i]);
             }
         }
 
-        public static void pendu()
+        public static void Pendu()
         {
-            string mot1, mot2 = "";
+            string mot1, mot2;
             char lettre;
             int essais1 = 0, essais2 = 0;
             bool test;
-
 
             do
             {
@@ -475,7 +475,7 @@ namespace Demarrage
 
             char[] tabChar1 = mot1.ToCharArray();
             char[] tabChar2 = mot1.ToCharArray();
-
+             
             for (int i = 0; i < tabChar2.Length; i++)
             {
                 if (i!=0 && i!= tabChar2.Length-1)
@@ -486,6 +486,7 @@ namespace Demarrage
             
             mot2 = new String(tabChar2);
             Console.WriteLine(mot2);
+
                 do
                 {
                     test = false;
@@ -523,10 +524,101 @@ namespace Demarrage
             }
 
         }
+        public static void Journee()
+        {
+            Random r = new();
+
+            //Chances de faire beune chance sur deux
+            int a = r.Next(1,3);
+            //Chances d'aller chez le garagiste et qu'il réparer la bicyclette: une chance sur 2 qu'elle soit cassée et si elle est cassée
+            //une chance sur deux qu'elle soit réparée
+            int b = r.Next(1,4);
+            //Chances e posseder Got : une chance sur 2 qu'il soit chez moi et une chance sur deux qu'il soit  a la bibliothèquee
+            int c = r.Next(1,3);
+
+
+            //Chances de faire la balade à vélo
+            if(a == 1 && b == 3  || a==1 && b ==2 )
+            {
+                Console.Write(" Il fait beau, mon vélo fonctionne, je vais me balader à vélo.");
+            }
+            //Chances d'aller à l'étang
+            else if( a==1 && b==1)
+            {
+                Console.WriteLine("Il fait beau, mon vélo ne fonctionne pas je vais à l'étang cueillir des joncs.");
+            }
+            //Chances de lire Game of Thrones chez soi
+            else if(a ==2 && c==1 )
+            {
+                Console.WriteLine("Il ne fait pas beau,je vais lire Game of Thrones chez moi dans mon fauteuil.");
+            }
+            //Chances de lire un roman chez soi
+            else if(a==2 && c==2)
+            {
+  
+                Console.WriteLine("Il ne fait pas beau, je lis un roman dans mon fauteuil.");
+            }
+        }
+
+        public static void DenombrerLettres()
+        {
+            string texte = "La beauté de la nature est indubitablement époustouflante. Les vastes paysages montagneux, les océans majestueux et les" +
+                " forêts luxuriantes offrent une escapade paradisiaque loin du tumulte de la vie quotidienne. La pureté et la fraîcheur de l'air en " +
+                "montagne procurent une sensation enivrante de liberté. Se tenir au sommet d'une montagne et contempler l'immensité du monde qui " +
+                "s'étend à perte de vue est une expérience qui marque à jamais l'esprit. De même, se promener le long d'une plage de sable fin, " +
+                "les pieds plongés dans l'eau froide de l'océan, crée une sérénité intérieure qui apaise l'âme. Enfin, prendre une randonnée dans" +
+                " une forêt émeraude, avec le doux murmure du vent dans les feuilles et la richesse de la flore et de la faune, procure un " +
+                "sentiment de connexion profonde avec la nature. La beauté de ces paysages naturels nous rappelle l'importance de préserver et de" +
+                " respecter notre environnement pour les générations futures.";
+
+            char[] tabTexte = texte.ToCharArray();
+            
+            char[] tabAlphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+            int[] tabOccurence = new int[26];
+
+            for (int i = 0; i < tabTexte.Length; i++)
+            {
+                for (int j = 0; j < tabAlphabet.Length; j++)
+                {
+                    if(tabTexte[i] == tabAlphabet[j])
+                    {
+                        tabOccurence[j] = tabOccurence[j] + 1;
+                    }
+                }
+            }
+
+            for  (int i = 0; i < tabOccurence.Length; i++)
+            {
+                Console.WriteLine("Il y a " + tabOccurence[i] + " la lettre " + tabAlphabet[i] + " dans votre texte.");
+            }
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-            pendu();
+            string test = "lavala";
+            string[] str = test.Split('a');
+
+            foreach(var word in str)
+            {
+                Console.Write(word);
+            }
+
+            char[] delimiterChars = { ' ', ',', '.', ':', '\t' };
+
+            string text = "one\ttwo :,five six seven";
+            System.Console.WriteLine($"Original text: '{text}'");
+
+            string[] words = text.Split(delimiterChars);
+            System.Console.WriteLine($"{words.Length} words in text:");
+
+            foreach (var word in words)
+            {
+                System.Console.WriteLine($"<{word}>");
+            }
+
+            Console.WriteLine(text.Split(delimiterChars).Length);
+
+            Pendu();
         }
     }
 }
