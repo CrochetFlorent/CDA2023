@@ -12,11 +12,11 @@ namespace Demarrage
         {
             int nb1, nb2;
 
-            Console.WriteLine("Entrer nombre 1");
+            Console.WriteLine("Entrer le nombre 1.");
             string saisie = Console.ReadLine();
             nb1 = int.Parse(saisie);
-            Console.WriteLine("Entrez nombre 2");
-            saisie =Console.ReadLine();
+            Console.WriteLine("Entrez le nombre 2");
+            saisie = Console.ReadLine();
             nb2 = int.Parse(saisie);
 
             int moyenne = (nb1 + nb2) / 2;
@@ -27,24 +27,24 @@ namespace Demarrage
         {
             double aire, rayon, volume;
 
-            Console.WriteLine("Entrer l'aire de la sphère");
+            Console.WriteLine("Entrer l'aire de la sphère.");
             string saisie = Console.ReadLine();
             rayon= int.Parse(saisie);
 
             aire = Math.Round(4 * Math.PI * Math.Pow(rayon, 2)*100)/100;
             volume = Math.Round((4/3)*Math.PI*Math.Pow(rayon, 3)*100)/100;
 
-            Console.WriteLine("L'aire de la sphère est de " + aire + " et le volume de " + volume);
+            Console.WriteLine("L'aire de la sphère est de " + aire + " et le volume de " + volume+".");
         }
 
         public static void Surface()
         {
             double rayon, angle, surface;
 
-            Console.WriteLine("Entrer le rayon d'un secteur circulaire");
+            Console.WriteLine("Entrer le rayon d'un secteur circulaire.");
             string saisie = Console.ReadLine();
             rayon = int.Parse(saisie);
-            Console.WriteLine("Entrez l'anlge du secteur");
+            Console.WriteLine("Entrez l'anlge du secteur.");
             saisie = Console.ReadLine();
             angle = int.Parse(saisie);
 
@@ -56,30 +56,30 @@ namespace Demarrage
 
             double somme, interet, nbAnnees;
 
-            Console.WriteLine("Entrer la somme sur votre compte");
+            Console.WriteLine("Entrer la somme sur votre compte.");
             string saisie = Console.ReadLine();
             somme = int.Parse(saisie);
-            Console.WriteLine("Entrez l'interet offert par la banque");
+            Console.WriteLine("Entrez l'interet offert par la banque.");
             saisie = Console.ReadLine();
             interet = int.Parse(saisie);
-            Console.WriteLine("Entrez le nombre d'années de placement");
+            Console.WriteLine("Entrez le nombre d'années de placement.");
             saisie = Console.ReadLine();
             nbAnnees = int.Parse(saisie);
 
             double interetSimple = somme*(1 + nbAnnees * (interet/100));
             double interetCompose = Math.Round(somme*Math.Pow((1 + (interet/100)),nbAnnees)*100)/100;
 
-            Console.WriteLine("Interet Simple = " + interetSimple + " et interet composé = " + interetCompose);
+            Console.WriteLine("Interet Simple = " + interetSimple + " et interet composé = " + interetCompose+".");
         }
 
         public static void Inversion()
         {
             int a, b, c;
 
-            Console.WriteLine("Entrer nombre 1");
+            Console.WriteLine("Entrer nombre 1.");
             string saisie = Console.ReadLine();
             a = int.Parse(saisie);
-            Console.WriteLine("Entrez nombre 2");
+            Console.WriteLine("Entrez nombre 2.");
             saisie = Console.ReadLine();
             b = int.Parse(saisie);
 
@@ -98,7 +98,7 @@ namespace Demarrage
         {
             int a;
 
-            Console.WriteLine("Entrez votre age");
+            Console.WriteLine("Entrez votre age.");
             string saisie = Console.ReadLine();
             a = int.Parse(saisie);
 
@@ -120,10 +120,10 @@ namespace Demarrage
         {
             int a, b;
 
-            Console.WriteLine("Entrer nombre 1");
+            Console.WriteLine("Entrer nombre 1.");
             string saisie = Console.ReadLine();
             a = int.Parse(saisie);
-            Console.WriteLine("Entrez nombre 2");
+            Console.WriteLine("Entrez nombre 2.");
             saisie = Console.ReadLine();
             b = int.Parse(saisie);
 
@@ -138,7 +138,7 @@ namespace Demarrage
             }
             else
             {
-                Console.WriteLine("Les deux nombre sont égaux");
+                Console.WriteLine("Les deux nombre sont égaux.");
             }
         }
 
@@ -146,13 +146,13 @@ namespace Demarrage
         {
             int a, b, c;
 
-            Console.WriteLine("Entrer nombre1");
+            Console.WriteLine("Entrer nombre1.");
             string saisie = Console.ReadLine();
             a = int.Parse(saisie);
-            Console.WriteLine("Entrez nombre2");
+            Console.WriteLine("Entrez nombre2.");
             saisie = Console.ReadLine();
             b = int.Parse(saisie);
-            Console.WriteLine("Entrez nombre3");
+            Console.WriteLine("Entrez nombre3.");
             saisie = Console.ReadLine();
             c = int.Parse(saisie);
 
@@ -192,11 +192,11 @@ namespace Demarrage
 
             if ((annee % 4 != 0) || (annee%4 == 0 && annee%100 == 0 && annee%400 != 0))
             {
-                Console.WriteLine("Pas bissextile");
+                Console.WriteLine("Pas bissextile.");
             }
             else
             {
-                Console.Write("Bissextile");
+                Console.Write("Bissextile.");
             }
         }
 
@@ -272,7 +272,7 @@ namespace Demarrage
                 }
 
                 miles = valeur * 0.621;
-                Console.WriteLine("En miles :" + miles);
+                Console.WriteLine("En miles :" + miles+".");
             }
         }
 
@@ -340,7 +340,7 @@ namespace Demarrage
 
             do
             {
-                Console.WriteLine("Entrez un nombre entre " + min + " et " + max);
+                Console.WriteLine("Entrez un nombre entre " + min + " et " + max+".");
                 nb = int.Parse(Console.ReadLine());
                 if(nbAlea<nb)
                 {
@@ -469,7 +469,7 @@ namespace Demarrage
 
             do
             {
-                Console.WriteLine("Entrer un mot");
+                Console.WriteLine("Entrer un mot.");
                 mot1 = Console.ReadLine();
             } while (mot1.Length < 5);
 
@@ -592,6 +592,58 @@ namespace Demarrage
                 Console.WriteLine("Il y a " + tabOccurence[i] + " la lettre " + tabAlphabet[i] + " dans votre texte.");
             }
         }
+
+        public static void AfficherPersonnes()
+        {
+            int[] tabAge = new int[20];
+            List<int> moinsEtEgal = new();
+            List<int> plusDeVingt = new();
+            List<int> moinsDeVingt = new();
+            /*plusDeVingt = null;
+            moinsDeVingt = null;
+            moinsEtEgal = null;*/
+
+            for (int i = 0; i < 20; i++)
+            {
+                Console.WriteLine("Entrez l'age d'une personne.");
+                tabAge[i] = int.Parse(Console.ReadLine());
+                if (tabAge[i]>20)
+                {
+                    plusDeVingt.Add(tabAge[i]);
+                }
+                else if (tabAge[i]<20)
+                {
+                    moinsDeVingt.Add(tabAge[i]);
+                    moinsEtEgal.Add(tabAge[i]);
+                }
+                else
+                {
+                    moinsEtEgal.Add(tabAge[i]);
+                }
+            }
+
+            Console.WriteLine("Plus de vingt ans.");
+            for (int i = 0; i < plusDeVingt.Count;i++)
+            {
+                
+                Console.Write(plusDeVingt[i]+" ");
+            }
+
+            Console.WriteLine("/nMoins de vingt ans.");
+            for (int i = 0; i < moinsDeVingt.Count; i++)
+            {
+
+                Console.Write(moinsDeVingt[i] + " ");
+            }
+
+            Console.WriteLine("/nMoins de vingt ans et 20ans.");
+            for (int i = 0; i < moinsEtEgal.Count; i++)
+            {
+
+                Console.Write(moinsEtEgal[i] + " ");
+            }
+
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
@@ -618,7 +670,7 @@ namespace Demarrage
 
             Console.WriteLine(text.Split(delimiterChars).Length);
 
-            Pendu();
+            AfficherPersonnes();
         }
     }
 }
