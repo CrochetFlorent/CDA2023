@@ -1,0 +1,15 @@
+C:\Users\fcrochet\Documents\GitHub\CDA2023\Algo\FonctionsATester\bin\Debug\net6.0\FonctionsATester.exe
+C:\Users\fcrochet\Documents\GitHub\CDA2023\Algo\FonctionsATester\bin\Debug\net6.0\FonctionsATester.deps.json
+C:\Users\fcrochet\Documents\GitHub\CDA2023\Algo\FonctionsATester\bin\Debug\net6.0\FonctionsATester.runtimeconfig.json
+C:\Users\fcrochet\Documents\GitHub\CDA2023\Algo\FonctionsATester\bin\Debug\net6.0\FonctionsATester.dll
+C:\Users\fcrochet\Documents\GitHub\CDA2023\Algo\FonctionsATester\bin\Debug\net6.0\FonctionsATester.pdb
+C:\Users\fcrochet\Documents\GitHub\CDA2023\Algo\FonctionsATester\obj\Debug\net6.0\FonctionsATester.csproj.AssemblyReference.cache
+C:\Users\fcrochet\Documents\GitHub\CDA2023\Algo\FonctionsATester\obj\Debug\net6.0\FonctionsATester.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fcrochet\Documents\GitHub\CDA2023\Algo\FonctionsATester\obj\Debug\net6.0\FonctionsATester.AssemblyInfoInputs.cache
+C:\Users\fcrochet\Documents\GitHub\CDA2023\Algo\FonctionsATester\obj\Debug\net6.0\FonctionsATester.AssemblyInfo.cs
+C:\Users\fcrochet\Documents\GitHub\CDA2023\Algo\FonctionsATester\obj\Debug\net6.0\FonctionsATester.csproj.CoreCompileInputs.cache
+C:\Users\fcrochet\Documents\GitHub\CDA2023\Algo\FonctionsATester\obj\Debug\net6.0\FonctionsATester.dll
+C:\Users\fcrochet\Documents\GitHub\CDA2023\Algo\FonctionsATester\obj\Debug\net6.0\refint\FonctionsATester.dll
+C:\Users\fcrochet\Documents\GitHub\CDA2023\Algo\FonctionsATester\obj\Debug\net6.0\FonctionsATester.pdb
+C:\Users\fcrochet\Documents\GitHub\CDA2023\Algo\FonctionsATester\obj\Debug\net6.0\FonctionsATester.genruntimeconfig.cache
+C:\Users\fcrochet\Documents\GitHub\CDA2023\Algo\FonctionsATester\obj\Debug\net6.0\ref\FonctionsATester.dll

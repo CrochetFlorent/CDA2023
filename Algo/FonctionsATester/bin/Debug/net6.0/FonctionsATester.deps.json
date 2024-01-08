@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "FonctionsATester/1.0.0": {
+        "runtime": {
+          "FonctionsATester.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FonctionsATester/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

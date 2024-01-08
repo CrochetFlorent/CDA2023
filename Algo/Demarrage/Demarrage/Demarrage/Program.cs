@@ -27,7 +27,7 @@ namespace Demarrage
         {
             double aire, rayon, volume;
 
-            Console.WriteLine("Entrer l'aire de la sphère.");
+            Console.WriteLine("Entrer le rayon de la sphère.");
             string saisie = Console.ReadLine();
             rayon= int.Parse(saisie);
 
@@ -670,7 +670,7 @@ namespace Demarrage
 
             Console.WriteLine(text.Split(delimiterChars).Length);
 
-            AfficherPersonnes();
+            Fourchette();
         }
     }
 }
