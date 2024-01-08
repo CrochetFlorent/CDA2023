@@ -66,8 +66,8 @@ namespace Demarrage
             saisie = Console.ReadLine();
             nbAnnees = int.Parse(saisie);
 
-            double interetSimple = somme*(1 + nbAnnees * (interet/100));
-            double interetCompose = Math.Round(somme*Math.Pow((1 + (interet/100)),nbAnnees)*100)/100;
+            double interetSimple = somme*(1+ nbAnnees * (interet/100));
+            double interetCompose = Math.Round(somme*Math.Pow(( 1+(interet/100)),nbAnnees)*100)/100;
 
             Console.WriteLine("Interet Simple = " + interetSimple + " et interet composé = " + interetCompose+".");
         }
@@ -646,31 +646,7 @@ namespace Demarrage
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            string test = "lavala";
-            string[] str = test.Split('a');
-
-            foreach(var word in str)
-            {
-                Console.Write(word);
-            }
-
-            char[] delimiterChars = { ' ', ',', '.', ':', '\t' };
-
-            string text = "one\ttwo :,five six seven";
-            System.Console.WriteLine($"Original text: '{text}'");
-
-            string[] words = text.Split(delimiterChars);
-            System.Console.WriteLine($"{words.Length} words in text:");
-
-            foreach (var word in words)
-            {
-                System.Console.WriteLine($"<{word}>");
-            }
-
-            Console.WriteLine(text.Split(delimiterChars).Length);
-
-            Fourchette();
+            Interets();
         }
     }
 }

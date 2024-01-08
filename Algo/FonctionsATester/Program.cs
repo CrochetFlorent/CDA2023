@@ -1,8 +1,10 @@
-﻿namespace FonctionsATester
+﻿using System.Net.NetworkInformation;
+using System.Timers;
+
+namespace FonctionsATester
 {
     public class Program
     {
-
         public static double Moyenne(double nb1,double nb2)
         {
             return (nb1 + nb2) / 2;
@@ -99,7 +101,7 @@
         public static Boolean Palindrome(string palindrome)
         {
             int i = 0, nbOk = 0;
-            if (!palindrome.Equals(""))
+            if (palindrome.Length>1)
             {
                 do
                 {
@@ -123,8 +125,76 @@
             {
                 return false;
             }
-
         }
+
+        public static bool Palindrome2(string palindrome)
+        {
+            int nb = 0;
+            bool test = false;
+ 
+            for(int i=0;i<palindrome.Length/2;i++)
+            {
+
+                if (palindrome[i].Equals(palindrome[palindrome.Length-nb-1]))
+                {
+                    nb++;
+                }
+                else
+                {
+                    i = palindrome.Length / 2;
+                }
+            }
+            if(nb==palindrome.Length/2 && palindrome.Length>1)
+            {
+                test = true;
+            }
+            else
+            {
+                test = false;
+            }
+
+            return test;
+        }
+        
+        public static string Chifumi(string s1, string s2)
+        {
+            string winner = "";
+            string resultat = "" + s1 + s2;
+
+
+                switch (resultat)
+                {
+                    case "pp":
+                        winner = "egalite";
+                    break;
+                    case "pf":
+                        winner = "joueur2";
+                    break;
+                    case "pc":
+                         winner = "joueur1";
+                    break;
+                    case "ff":
+                        winner = "egalite";
+                    break;
+                    case "fp":
+                        winner = "joueur1";
+                    break;
+                    case "fc":
+                        winner = "joueur2";
+                    break;
+                    case "cc":
+                        winner = "egalite";
+                    break;
+                    case "cp":
+                         winner = "joueur2";
+                    break;
+                    case "cf":
+                        winner = "joueur1";
+                    break;
+                }
+            return winner;
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
