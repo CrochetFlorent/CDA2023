@@ -230,5 +230,60 @@ namespace TestFonctions
             String winner = FonctionsATester.Program.Chifumi("c", "p");
             Assert.AreEqual(winner, "joueur2");
         }
+
+        [TestMethod]
+        public void testYaourts()
+        {
+            String couleur1, couleur2;
+            FonctionsATester.Program.Yaourts(out couleur1,out couleur2);
+            Assert.AreEqual("Rouge",couleur1);
+            Assert.AreEqual("Jaune", couleur2);
+        }
+
+        [TestMethod]
+        public void testRetourTableau1()
+        {
+            int _nb1, _nb2;
+            FonctionsATester.Program.RetourTableau(new[] { 1, 2, 2, 4, 6, 6, 7, 8, 9, 10 },2,6,out _nb1,out _nb2);
+            Assert.AreEqual(2, _nb1);
+            Assert.AreEqual(2, _nb2);
+        }
+
+        [TestMethod]
+        public void testRetourTableau2()
+        {
+            int _nb1, _nb2;
+            FonctionsATester.Program.RetourTableau(new[] { 1, 2, 2, 4, 6, 6, 7, 8, 9, 10 }, 1, 6, out _nb1, out _nb2);
+            Assert.AreEqual(1, _nb1);
+            Assert.AreEqual(2, _nb2);
+        }
+
+        [TestMethod]
+        public void testRetourTableau3()
+        {
+            int _nb1, _nb2;
+            FonctionsATester.Program.RetourTableau(new[] { 1, 2, 2, 4, 6, 6, 7, 8, 9, 10 }, 2, 7, out _nb1, out _nb2);
+            Assert.AreEqual(2, _nb1);
+            Assert.AreEqual(1, _nb2);
+        }
+
+        [TestMethod]
+        public void testRetourTableau4()
+        {
+            int _nb1, _nb2;
+            FonctionsATester.Program.RetourTableau(new[] { 1, 2, 2, 4, 6, 6, 7, 8, 9, 10 }, 9, 10, out _nb1, out _nb2);
+            Assert.AreEqual(1, _nb1);
+            Assert.AreEqual(1, _nb2);
+        }
+
+        [TestMethod]
+        public void testRetourTableau5()
+        {
+            int _nb1, _nb2;
+            FonctionsATester.Program.RetourTableau(new int[0], 9, 10, out _nb1, out _nb2);
+            Assert.AreEqual(0, _nb1);
+            Assert.AreEqual(0, _nb2);
+        }
+
     }
 }

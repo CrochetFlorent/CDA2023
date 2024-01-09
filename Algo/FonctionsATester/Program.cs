@@ -1,4 +1,6 @@
-﻿using System.Net.NetworkInformation;
+﻿using System;
+using System.Globalization;
+using System.Net.NetworkInformation;
 using System.Timers;
 
 namespace FonctionsATester
@@ -7,6 +9,7 @@ namespace FonctionsATester
     {
         public static double Moyenne(double nb1,double nb2)
         {
+            //Retour de la moyenne
             return (nb1 + nb2) / 2;
         }
         
@@ -192,6 +195,41 @@ namespace FonctionsATester
                     break;
                 }
             return winner;
+        }
+
+        public static void Yaourts(out string couleur1, out string couleur2)
+        {
+            Dictionary<string, int> dict = new Dictionary<string, int>
+            {
+                {"Jaune", 5},
+                {"Rouge", 12},
+                {"Bleu", 4}
+            };
+            var affichage = dict.OrderBy(k => k.Value).ToDictionary(k => k.Key, k => k.Value);
+            affichage.Remove(affichage.Keys.First());
+
+            couleur1 = affichage.Keys.Last();
+            couleur2 = affichage.Keys.First();
+        }
+
+        public static void RetourTableau(int[] tab,int nb1,int nb2, out int _nb1, out int _nb2)
+        {
+            int i = 0;
+            _nb1 = 0;
+            _nb2 = 0;
+
+            while(i < tab.Length)
+            {
+                if (tab[i] == nb1)
+                {
+                    _nb1 += 1;
+                }
+                else if (tab[i] == nb2)
+                {
+                    _nb2 += 1;
+                }
+                i++;
+            }
         }
 
         static void Main(string[] args)
