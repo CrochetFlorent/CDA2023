@@ -234,11 +234,15 @@ namespace TestFonctions
         [TestMethod]
         public void testYaourts()
         {
-            String couleur1, couleur2;
-            FonctionsATester.Program.Yaourts(out couleur1,out couleur2);
-            Assert.AreEqual("Rouge",couleur1);
+            string couleur1, couleur2;
+            int nbCouleur1, nbCouleur2;
+            FonctionsATester.Program.Yaourts(new[] { "Jaune","Jaune", "Bleu", "Jaune", "Rouge","Vert", "Vert", "Vert", "Orange", "Vert","Rouge" },out couleur1,out couleur2,out nbCouleur1, out nbCouleur2);
+            Assert.AreEqual("Vert",couleur1);
+            Assert.AreEqual(4, nbCouleur1);
             Assert.AreEqual("Jaune", couleur2);
+            Assert.AreEqual(3, nbCouleur2);
         }
+
 
         [TestMethod]
         public void testRetourTableau1()
