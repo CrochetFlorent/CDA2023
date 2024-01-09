@@ -103,14 +103,14 @@ namespace FonctionsATester
             int i = 0, nbOk = 0;
             if (palindrome.Length>1)
             {
-                do
+                while (i < (int)((palindrome.Length / 2)))
                 {
                     if (palindrome[i].Equals(palindrome[palindrome.Length - i - 1]))
                     {
                         nbOk++;
                     }
                     i++;
-                } while (i < (int)((palindrome.Length / 2)));
+                } 
 
                 if (nbOk++ == (int)palindrome.Length / 2)
                 {
@@ -160,7 +160,6 @@ namespace FonctionsATester
         {
             string winner = "";
             string resultat = "" + s1 + s2;
-
 
                 switch (resultat)
                 {
