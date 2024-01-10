@@ -284,29 +284,11 @@ namespace FonctionsATester
         public static string Fibonacci(int nombre)
         {
 
-            string debut = "01";
-            
-            string suite = debut;
-
-            string nb1 = suite.Substring(suite.Length - 2, 2);
-            string nb2 = suite.Substring(suite.Length - 1, 1);
-
-            int intNb1 = int.Parse(nb1);
-            int intNb2 = int.Parse(nb2);
-            int intNb3 = (intNb1 + intNb2);
-
-            suite = suite + intNb3.ToString();
-
-            if (nombre > 0)
-            {
-                suite = Fibonacci(--nombre);
-            }
-
-            return suite;
+           
         }
         static void Main(string[] args)
         {
-            Console.WriteLine(Fibonacci( 5));
+            Console.WriteLine(Fibonacci(5));
         }
     }
 }
