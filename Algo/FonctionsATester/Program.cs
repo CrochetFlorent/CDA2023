@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Globalization;
 using System.Net.NetworkInformation;
-using System.Timers;
+using System.Security.Cryptography.X509Certificates;
 
 namespace FonctionsATester
 {
@@ -18,44 +18,45 @@ namespace FonctionsATester
         {
 
             //Un nombre premier est un nombre entier qui admet exactement deux diviseurs : 1 et lui-meme
-            //Tout nombre est divisible par 1 et lui meme , le tout est de savoir s'il y a plus de diviseurs
-            int test = 0;
-            bool isPremier = false;
+            //Tout nombre est divisible par 1 et lui meme , le tout est de savoir s'il y a plus de diviseurs autres
+            //que ces deux la
+            int nombreDeDiviseurs = 0;
+            bool estPremier = false;
 
-            //Je ne test pas 1, je commence à deux, jusqu'au nombre testé
+            //Je ne test pas 1, je commence à deux, jusqu'au nombre precédent au nombre testé
             for (int i = 2; i < nb; i++)
             {
                 //Si il est divisible par l'indice j'incrémente une variable 
                 if (nb % i == 0)
                 {
-                    test += 1;
+                    nombreDeDiviseurs += 1;
                 }
             }
             //S'il n'a pas été divisé âr un autre nombre que 1 ou lui meme, il est premier
-            if (test == 0)
+            if (nombreDeDiviseurs == 0)
             {
-                isPremier= true;
+                estPremier= true;
             }
             else
             {
-                isPremier = false;
+                estPremier = false;
             }
-            return isPremier;
+            return estPremier;
         }
-        public static Boolean Bissext(int annee)
+        public static Boolean Bissextile(int annee)
         {
-            bool isBissext = false;
+            bool estBissextile = false;
             //Si l'année est divisible par 4, par 100, et pas par 400 elle n'est pas bissextile
             if ((annee % 4 != 0) || (annee % 4 == 0 && annee % 100 == 0 && annee % 400 != 0))
             {
-                isBissext= false;
+                estBissextile= false;
             }
             //Si elle est divisible par 4 et/ou par 400 elle est bissextile
             else
             {
-                isBissext= true;
+                estBissextile = true;
             }
-            return isBissext;
+            return estBissextile;
         }
 
         public static int Barnabe(double somme)
@@ -94,7 +95,7 @@ namespace FonctionsATester
 
         public static Boolean RechercheTableau(int nb, int[] tab)
         {
-            bool isIn = false;
+            bool estDansLeTableau = false;
             int i;
 
             //Je parcours mon tableau avec un for
@@ -106,17 +107,17 @@ namespace FonctionsATester
                     //Je le signal par le passage du booleen test à vrai et je sors de la boucle pour en passant
                     //à l'indice une valeur supérieure à son maximum
                     i = tab.Length;
-                    isIn = true;
+                    estDansLeTableau = true;
                 }
                 //Sinon je repasse dans la boucle pour voir si le prochain nombre du tableau est égale au nombre choisi
             }
             
-            return isIn;
+            return estDansLeTableau;
         }
 
         public static Boolean Palindrome(string palindrome)
         {
-            int i = 0, nbOk = 0;
+            int i = 0, nombreDeLettreIdentiques = 0;
             //Si le mot devant etre testé est plus grand qu'une seul lettre
             if (palindrome.Length>1)
             {
@@ -127,13 +128,13 @@ namespace FonctionsATester
                     if (palindrome[i].Equals(palindrome[palindrome.Length - i - 1]))
                     {
                         //J'incrémente une variable de test
-                        nbOk++;
+                        nombreDeLettreIdentiques++;
                     }
                     i++;
                 } 
                 //Si la variable de test est égale à la moitié du mot cela veut dire que toutes lettres rencontrées dans cette ordre
                 //sont identiques aux lettres de l'autre côté du milieu
-                if (nbOk == (int)palindrome.Length / 2)
+                if (nombreDeLettreIdentiques == (int)palindrome.Length / 2)
                 {
                     return true;
                 }
@@ -151,48 +152,48 @@ namespace FonctionsATester
 
 
         //Version de detection de palindrome avec une boucle for: on va jusqu'au milieu du mot pour voir si de l'autre côté
-        // les lettre ssont identiques
+        // les lettre sont identiques
         public static bool Palindrome2(string palindrome)
         {
-            int nb = 0;
-            bool test = false;
+            int nombreDeLettreIdentiques = 0;
+            bool estUnPalindrome = false;
  
             for(int i=0;i<palindrome.Length/2;i++)
             {
 
-                if (palindrome[i].Equals(palindrome[palindrome.Length-nb-1]))
+                if (palindrome[i].Equals(palindrome[palindrome.Length- nombreDeLettreIdentiques - 1]))
                 {
-                    nb++;
+                    nombreDeLettreIdentiques++;
                 }
                 else
                 {
                     i = palindrome.Length / 2;
                 }
             }
-            if(nb==palindrome.Length/2 && palindrome.Length>1)
+            if(nombreDeLettreIdentiques == palindrome.Length/2 && palindrome.Length>1)
             {
-                test = true;
+                estUnPalindrome = true;
             }
             else
             {
-                test = false;
+                estUnPalindrome = false;
             }
             
-            return test;
+            return estUnPalindrome;
         }
         
         public static string Chifumi(string s1, string s2)
         {
             //Nous avons en paramètres d'entrée deux caractères chacun représentant un lancé
             //p pour pierre, f pour feuille, c pour ciseaux
-            string winner = "";
             //Le resultat du lancé est une chaine de caractère comprenant les deux caractères
             //Le premier est le lancé du joueur1
             //Le second celui du joueur 2
-            string resultat = "" + s1 + s2;
+            string manche = "" + s1 + s2;
+            string winner = "";
 
             //Nous testons tous les cas
-                switch (resultat)
+            switch (manche)
                 {
                     case "pp":
                         winner = "egalite";
@@ -226,14 +227,15 @@ namespace FonctionsATester
             return winner;
         }
 
-        public static void Yaourts(string[] tabCouleurs,out string couleur1, out string couleur2,out int nbCouleur1, out int nbCouleur2)
+        public static void Yaourts(string[] tabCouleurs,out string couleur1, out string couleur2)
         {
             Dictionary<string, int> couleurs = new Dictionary<string, int>();
-
+            couleur1 = ""; 
+            couleur2 = "";
             //Pour chaque couleur dans le tableaux contenant l'énumération de couleurs
             foreach (string color in tabCouleurs)
             {
-                //Si la couleur n'est pas contenu
+                //Si la couleur n'est pas représentée dans le dictionnaire
                     if(!couleurs.ContainsKey(color))
                     {
                     //Nous l'ajoutons
@@ -248,48 +250,63 @@ namespace FonctionsATester
              }
 
             //Nous trions les couleurs dans l'ordre croissant
-            var tri = couleurs.OrderBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+            //On récupère les deux couleurs les plus représentées
+            var tri = couleurs.OrderByDescending(x => x.Value).Take(2).ToDictionary(x => x.Key, x => x.Value);
 
-            //Comme nous voulons les deux couleurs les plus représentées, nous enlevonsle premier élément du dictionnaire 
-            //jusqu'a n'en avoir que deux
-            while (tri.Count > 2)
-            {
-                tri.Remove(tri.Keys.First());
-            }
+            couleur1 = tri.Keys.First();
+            couleur2 = tri.Keys.Last();
 
-            //Nous mettons le dernier en premier et inversement
-            couleur1 = tri.Keys.Last();
-            couleur2 = tri.Keys.First();
-            nbCouleur1 = tri.Values.Last();
-            nbCouleur2 = tri.Values.First();
         }
 
-        public static void RetourTableau(int[] tab,int nbACompter1,int nbACompter2, out int nbCompte1, out int nbCompte2)
+        public static void RetourTableau(int[] tab,int nombreACompter1,int nombreACompter2, out int nombreCompte1, out int nombreCompte2)
         {
-            nbCompte1 = 0;
-            nbCompte2 = 0;
+           nombreCompte1 = 0;
+           nombreCompte2 = 0;
 
             //Pour chaque élément du tableau
             for (int i = 0; i < tab.Length; i++)
             {
                 //Si l'élément est égale au premier nombre à tester
-                if (tab[i] == nbACompter1)
+                if (tab[i] == nombreACompter1)
                 {
                     //On incrémente le nombre de fois ou le nombre est présent
-                    nbCompte1 += 1;
+                    nombreCompte1 += 1;
                 }
-                //Si l'élément est égale au deuxièmenombre à tester
-                else if (tab[i] == nbACompter2)
+                //Si l'élément est égale au deuxième nombre à tester
+                else if (tab[i] == nombreACompter2)
                 {
                     //On incrémente le nombre de fois ou le nombre est présent
-                    nbCompte2 += 1;
+                    nombreCompte2 += 1;
                 }
             }
         }
 
+        public static string Fibonacci(int nombre)
+        {
+
+            string debut = "01";
+            
+            string suite = debut;
+
+            string nb1 = suite.Substring(suite.Length - 2, 2);
+            string nb2 = suite.Substring(suite.Length - 1, 1);
+
+            int intNb1 = int.Parse(nb1);
+            int intNb2 = int.Parse(nb2);
+            int intNb3 = (intNb1 + intNb2);
+
+            suite = suite + intNb3.ToString();
+
+            if (nombre > 0)
+            {
+                suite = Fibonacci(--nombre);
+            }
+
+            return suite;
+        }
         static void Main(string[] args)
         {
-            
+            Console.WriteLine(Fibonacci( 5));
         }
     }
 }
