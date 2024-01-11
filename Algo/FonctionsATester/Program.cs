@@ -281,14 +281,9 @@ namespace FonctionsATester
             }
         }
 
-        public static string Fibonacci(int nombre)
-        {
-
-           
-        }
         static void Main(string[] args)
         {
-            Console.WriteLine(Fibonacci(5));
+     
         }
     }
 }
