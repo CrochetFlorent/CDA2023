@@ -1,0 +1,15 @@
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Evaluation1\bin\Debug\net6.0\Evaluation1.exe
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Evaluation1\bin\Debug\net6.0\Evaluation1.deps.json
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Evaluation1\bin\Debug\net6.0\Evaluation1.runtimeconfig.json
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Evaluation1\bin\Debug\net6.0\Evaluation1.dll
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Evaluation1\bin\Debug\net6.0\Evaluation1.pdb
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Evaluation1\obj\Debug\net6.0\Evaluation1.csproj.AssemblyReference.cache
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Evaluation1\obj\Debug\net6.0\Evaluation1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Evaluation1\obj\Debug\net6.0\Evaluation1.AssemblyInfoInputs.cache
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Evaluation1\obj\Debug\net6.0\Evaluation1.AssemblyInfo.cs
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Evaluation1\obj\Debug\net6.0\Evaluation1.csproj.CoreCompileInputs.cache
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Evaluation1\obj\Debug\net6.0\Evaluation1.dll
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Evaluation1\obj\Debug\net6.0\refint\Evaluation1.dll
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Evaluation1\obj\Debug\net6.0\Evaluation1.pdb
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Evaluation1\obj\Debug\net6.0\Evaluation1.genruntimeconfig.cache
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Evaluation1\obj\Debug\net6.0\ref\Evaluation1.dll

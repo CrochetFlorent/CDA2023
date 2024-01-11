@@ -1,0 +1,15 @@
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Recursive\bin\Debug\net6.0\Recursive.exe
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Recursive\bin\Debug\net6.0\Recursive.deps.json
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Recursive\bin\Debug\net6.0\Recursive.runtimeconfig.json
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Recursive\bin\Debug\net6.0\Recursive.dll
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Recursive\bin\Debug\net6.0\Recursive.pdb
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Recursive\obj\Debug\net6.0\Recursive.csproj.AssemblyReference.cache
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Recursive\obj\Debug\net6.0\Recursive.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Recursive\obj\Debug\net6.0\Recursive.AssemblyInfoInputs.cache
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Recursive\obj\Debug\net6.0\Recursive.AssemblyInfo.cs
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Recursive\obj\Debug\net6.0\Recursive.csproj.CoreCompileInputs.cache
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Recursive\obj\Debug\net6.0\Recursive.dll
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Recursive\obj\Debug\net6.0\refint\Recursive.dll
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Recursive\obj\Debug\net6.0\Recursive.pdb
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Recursive\obj\Debug\net6.0\Recursive.genruntimeconfig.cache
+C:\Users\fcrochet\Documents\GitHub\ABC_DEV_2306_fcrochet\Demarrage\Recursive\obj\Debug\net6.0\ref\Recursive.dll
