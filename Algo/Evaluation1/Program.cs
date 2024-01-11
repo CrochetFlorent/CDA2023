@@ -12,31 +12,23 @@ namespace Evaluation1
             //Une variable visant à récuprer la somme des ces valeurs
             double somme = 0;
             // Et une variable visant à récuprer la valeur la plus grande
-            int temp = numbers[0];
+            int nbLePlusGrand = numbers.Max();
 
             //On parcours le tableau 
             for (int i = 0; i < numbers.Length; i++)
             {
                 //On calcul la somme des nombres dans le tableau en incrémentant la somme
                 somme += numbers[i];
-
-                //Si la première valeur enregistrée dans la variable temp est plus petite que celle à l'indice 
-                //(sachant que l'on compare la première avec elle même une fois)
-                if (temp < numbers[i])
-                {
-                    //On récupère la plus grande
-                    temp = numbers[i];
-                }
-                //Et ainsi de suite
             }
 
             Console.WriteLine("Bienvenue dans le programme de calcul du tableau d'entier.");
             //On affiche les résultats
             //En premier la somme divisée par le nombre de nombres présents dans le tableau pour la moyenne
             Console.WriteLine("Moyenne des valeurs du tableau : "+somme/numbers.Length);
-            //En second LA valeur la plus grande puis son carré
-            Console.WriteLine("Valeur la plus grande dans le tableau: "+temp+" élevée au carré: " + Math.Pow(temp, 2));
+            //En second La valeur la plus grande puis son carré
+            Console.WriteLine("Valeur la plus grande dans le tableau: "+nbLePlusGrand+" élevée au carré: " + Math.Pow(nbLePlusGrand, 2));
         }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
