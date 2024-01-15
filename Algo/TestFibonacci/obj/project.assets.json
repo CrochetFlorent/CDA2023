@@ -1788,6 +1788,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Fibonacci/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Fibonacci.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Fibonacci.dll": {}
+        }
       }
     }
   },
@@ -6251,10 +6261,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Fibonacci/1.0.0": {
+      "type": "project",
+      "path": "../Fibonacci/Fibonacci.csproj",
+      "msbuildProject": "../Fibonacci/Fibonacci.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Fibonacci >= 1.0.0",
       "MSTest.TestAdapter >= 2.2.8",
       "MSTest.TestFramework >= 2.2.8",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
@@ -6294,7 +6310,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\fcrochet\\Documents\\GitHub\\CDA2023\\Algo\\Fibonacci\\Fibonacci.csproj": {
+              "projectPath": "C:\\Users\\fcrochet\\Documents\\GitHub\\CDA2023\\Algo\\Fibonacci\\Fibonacci.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
