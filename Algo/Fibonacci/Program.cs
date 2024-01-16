@@ -49,7 +49,6 @@
         FIN PROGRAMME*/
         public static string FibonacciBoucle(int n)
         {
-
             string resultat = "\n0\n1";
             long nbPrecedent = 0;   
             long nbCourant = 1;
