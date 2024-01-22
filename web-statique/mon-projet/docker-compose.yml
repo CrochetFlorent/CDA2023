@@ -1,10 +1,10 @@
-name: fcrochet-apache
+name: fcrochet-site-web-statique
 services:
   apache:
     image: httpd
     container_name: fcrochet-httpd
     restart: always
     volumes: 
-    - './:/usr/local/apache2/htdocs'
+    - './www/:/usr/local/apache2/htdocs'
     ports: 
     - '3000:80'
