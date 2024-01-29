@@ -16,13 +16,29 @@ namespace TP01
 
     internal class Program
     {
+        public string? _saisie;
+        public string saisie
+        {
+            get
+            {
+                return _saisie;
+            }
+            set
+            {
+                saisie = _saisie;
+            }
+        }
         public static string afficheSaisie(string typeSaisie)
         {
-            string saisie;
+            string? saisie;
+            string replace;
             //Saisie du nom d'un personne
-            Console.WriteLine("Saisir le "+typeSaisie);
-            saisie = Console.ReadLine();
-            saisie[0].ToString().ToUpper();
+            Console.WriteLine("Saisir le " + typeSaisie);
+            saisie = Console.ReadLine().ToLower();
+            char[] saisieChar = saisie.ToCharArray();
+            saisieChar[0] = saisieChar[0].ToString().ToUpper()[0]; ;
+            saisie = new string(saisieChar);
+            
             return saisie;
         }
 
@@ -53,7 +69,7 @@ namespace TP01
         //Enlever une personne de la liste de personnes
         public static void supprimerPersonne(List<Person> listePersonnes,Person suppr)
         {      
-                Person temp = Person.comparer(suppr,listePersonnes);
+                Person? temp = Person.comparer(suppr,listePersonnes);
                 if(temp!=null)
                 {
                     listePersonnes.Remove(temp);
@@ -110,7 +126,7 @@ namespace TP01
                 }
 
                 //On demande à l'utilisateur s'il veut réjouter une personne
-                Console.WriteLine("Voulez vous ajouter une autre personne? o pour oui, n'importe quelle autre touche pour quitter.");
+                Console.WriteLine("Voulez vous voir si vous pouvez ajouter une autre personne? o pour oui, n'importe quelle autre touche pour quitter.");
 
             } while (Console.ReadLine().ToUpper().Equals("O"));//Si o , on repasse dans la boucle, sinon on quitte
 
