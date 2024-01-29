@@ -20,7 +20,7 @@ namespace TP01
         }
 
         //Fonction de comparaison de deux personnes
-        public static Person comparer(Person other,List<Person> listePersonnes)
+        public static Person? comparer(Person other,List<Person> listePersonnes)
         {
             return listePersonnes.Find(p => p.nom.ToUpper() == other.nom.ToUpper() && p.prenom.ToUpper() == other.prenom.ToUpper());
         }
@@ -31,7 +31,7 @@ namespace TP01
             bool trouve = false;
             //Si la personne n'est pas présente, on l'ajoute
 
-            Person same = comparer(myPerson, listePersonnes);
+            Person? same = comparer(myPerson, listePersonnes);
             
             if(same == null)
             {
