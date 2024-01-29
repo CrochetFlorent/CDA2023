@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fcrochet\\Documents\\GitHub\\tp-git-a-deux-aurelhassan\\TP01\\TP01.csproj": {}
+    "C:\\Users\\fcrochet\\Documents\\GitHub\\CDA2023\\Algo\\Personne\\TP01\\TP01.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fcrochet\\Documents\\GitHub\\tp-git-a-deux-aurelhassan\\TP01\\TP01.csproj": {
+    "C:\\Users\\fcrochet\\Documents\\GitHub\\CDA2023\\Algo\\Personne\\TP01\\TP01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fcrochet\\Documents\\GitHub\\tp-git-a-deux-aurelhassan\\TP01\\TP01.csproj",
+        "projectUniqueName": "C:\\Users\\fcrochet\\Documents\\GitHub\\CDA2023\\Algo\\Personne\\TP01\\TP01.csproj",
         "projectName": "TP01",
-        "projectPath": "C:\\Users\\fcrochet\\Documents\\GitHub\\tp-git-a-deux-aurelhassan\\TP01\\TP01.csproj",
+        "projectPath": "C:\\Users\\fcrochet\\Documents\\GitHub\\CDA2023\\Algo\\Personne\\TP01\\TP01.csproj",
         "packagesPath": "C:\\Users\\fcrochet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fcrochet\\Documents\\GitHub\\tp-git-a-deux-aurelhassan\\TP01\\obj\\",
+        "outputPath": "C:\\Users\\fcrochet\\Documents\\GitHub\\CDA2023\\Algo\\Personne\\TP01\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
