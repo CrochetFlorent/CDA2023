@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "DZsmwwc0cbNboOfayI9PSlPDVuWvn9Fx/0hsNhCN+Lt2y5ndEGSSauHM+nN1Mgt1jxRboTBq7tQmTznFvweUJA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fcrochet\\Documents\\GitHub\\tp-git-a-deux-aurelhassan\\TP01\\TP01.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fcrochet\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
