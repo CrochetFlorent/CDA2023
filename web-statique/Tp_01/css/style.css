@@ -1,0 +1,149 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: tp01;
+    font-size:20px;
+    box-sizing: border-box;
+}
+
+.logo{
+    position: absolute;
+    height: 30%;
+    left: 13%;
+    top:6%;
+}
+
+@font-face{
+    font-family:tp01;
+    src: url("/Tp_01/images/fonts/channel-webfont.woff");
+    
+}
+body{
+    background-image: url(/Tp_01/images/images/bg_motif.gif);
+    background-repeat: repeat;
+    min-height: 100vh;
+}
+header{
+    position: relative;
+}
+nav{
+    height: 80px ;
+    background-color: black;
+    border-bottom: 1px white solid;
+    position: sticky;
+    top: 0px;
+
+}
+nav>ul{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 100%;
+    gap:40px;
+    margin-right: 15px;
+}
+
+nav>ul>li{ 
+    color:white;
+    list-style-type: none;
+    position: relative;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+nav>ul>li>ul>li {
+    list-style-type: none;
+    display: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    border: 1px white solid;
+}
+
+nav>ul>li>ul{
+    position: absolute;
+    background-color:black;
+    top:100%;
+}
+
+nav>ul>li:hover{
+    color: rgb(191,18,24);
+}
+
+nav>ul>li:hover>ul>li{
+    list-style-type: none;
+    display: block;
+    color:white;
+}
+
+nav>ul>li>ul>li:hover
+{
+    color:rgb(191,18,24);
+}
+
+main{
+    background-color: rgba(87,87, 87,.5);
+    width:60%;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow:black 0 0 0.5rem;
+}
+
+
+@font-face{
+    font-family: old-style;
+    src: url("/Tp_01/images/fonts/OLDSH___.TTF");
+}
+
+#raisin{
+    margin-bottom: 5px;
+}
+
+#sous-raisin{
+    background-color: white;
+    color:brown;
+    font-family: old-style;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom: 1px white solid;
+}
+
+#section1>*{
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+#section2>article>h2{
+    color:white;
+    display: inline;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+}
+
+.vigne{
+    display: inline-block;
+    background-image: url("/Tp_01/images/images/bg_g.png");
+    background-repeat: no-repeat;
+    width: 32.4%;
+    padding: 10px;
+}
+
+.vigne>img{
+    float:right;
+}
+
+.vigne>p{
+    color:white;
+    font-size: 1.2em;
+    font-family:'Times New Roman', Times, serif;
+    text-align: justify;
+}
