@@ -20,6 +20,7 @@
 body{
     background-image: url(/Tp_01/images/images/bg_motif.gif);
     background-repeat: repeat;
+    position: relative;
 }
 
 header{
@@ -81,7 +82,7 @@ nav>ul>li>ul>li:hover
     color:rgb(191,18,24);
 }
 
-main{
+main,footer{
     background-color: rgba(87,87, 87,.5);
     width:60%;
     padding-top: 10px;
@@ -150,7 +151,7 @@ main{
     text-align: justify;
 }
 
-.bouton-suite{
+button{
     position: relative;
     color:white;
     background-color:silver ;
@@ -162,10 +163,6 @@ main{
     width: 105px;
 }
 
-.bouton-suite:hover{
-    background-color: #575757;
-    color:red;
-}
 
 #section2{
     border-bottom: 1px white solid;
@@ -174,9 +171,9 @@ main{
 
 #section3{
     margin-top: 15px;
-    margin-bottom: 15px;
     height: 320px;
     position: relative;
+    border-bottom: 1px white solid;
 }
 
 #div-du-bas1{
@@ -256,7 +253,60 @@ main{
     top:80%;
 }
 
-#div-du-bas2>button:hover{
-    background-color: #575757;
-    color:red;
+button:hover{
+    animation: btn-anim ease-in-out 300ms forwards;
+}
+
+@keyframes btn-anim{
+    from {
+        color: white; 
+        text-shadow: none;
+        opacity: 1;
+    }
+    to {
+        color: red; 
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); 
+        text-shadow:  1px 1px 0.5em white;
+        opacity: 0.5;
+    }
+}
+
+footer{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 3vh;
+}
+
+footer>ul{
+    height: 50px;
+}
+
+#footer-img{
+    position: absolute;
+    left:65%;
+}
+
+#footer-background{
+    position: absolute;  
+    width: 100%;
+}
+
+#liste-footer{
+    position: absolute;
+    list-style-type: none;
+    padding: 60px;
+
+}
+
+#liste-footer>li{
+    display:inline-block;
+    color: white;
+    margin-right: 20px;
+    font-size: 0.8em;
+}
+
+#liste-footer>li>a:hover{
+    color: red;
 }
