@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/JS06/css/style.css">
+    <script src="/JS06/js/script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <div id="div1">
+            <label>
+                Qté :
+                <input type="number" name="quantite1" required>
+                Prix unitaire :
+                <input type="number" name="prix-unitaire1" step="0.01" required>
+                Prix :
+                <input type="number" name="prix1" disabled>
+            </label>
+            <label>
+                Qté :
+                <input type="number" name="quantite2" step="0.01" required>
+                Prix unitaire :
+                <input type="number" name="prix-unitaire2" step="0.01" required>
+                Prix :
+                <input type="number" name="prix2" id="droite" disabled>
+            </label>
+        </div>
+        <div id="div2">
+            <input type="number" name="resultat" id="resultat" disabled>
+        </div>
+    </form>
+</body>
+</html>

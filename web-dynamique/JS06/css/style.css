@@ -1,0 +1,44 @@
+body{
+    background-color: #A2B7CC
+}
+
+body>form{
+    position: relative;
+    display : block;
+    width:39%;
+    padding-left: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+
+#div2{
+    position: relative;
+    width: 13%;
+    left: 73.1%;
+    border-top: 1px black solid;
+}
+
+body>form>div{
+    display:inline;
+}
+
+body>form>div>*{
+    display:block;  
+}
+
+#droite{
+   margin-bottom: 20px;
+}
+
+
+form{
+    display:flex;
+    flex-direction: row;
+    width: max-content;
+    border: 8px white solid;
+    background-color: rgb(143,188,143);
+}
+
+
+

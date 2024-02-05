@@ -1,0 +1,27 @@
+body{
+    background-color: #A2B7CC
+}
+
+header{
+    font-size: 2rem;
+    font-weight: bold;
+    height: 60px;
+}
+
+form{
+    display:flex;
+    flex-direction: row;
+    width: max-content;
+    border: 8px white solid;
+    background-color: rgb(143,188,143);
+}
+
+form>div{
+    padding: 5px;
+}
+
+form>div>label{
+    display:block;
+}
+
+
