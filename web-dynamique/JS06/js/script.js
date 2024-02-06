@@ -26,7 +26,7 @@ function setValuesFocusOut()
     document.querySelector(('input[name="prix2"]')).value = setTwoNumberDecimal(document.querySelector(('input[name="prix2"]')).value);
 
     document.querySelector('input[name="resultat"]').value = 
-    document.querySelector(('input[name="prix1"]')).value*1 + document.querySelector(('input[name="prix2"]')).value*1;
+    setTwoNumberDecimal(Number(document.querySelector(('input[name="prix1"]')).value) + Number(document.querySelector(('input[name="prix2"]')).value));
 }
 
 
