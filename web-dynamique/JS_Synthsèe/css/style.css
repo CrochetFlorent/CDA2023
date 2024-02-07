@@ -6,7 +6,7 @@ body{
     border: 4px white solid;
     border-radius: 40px;
     width:35%;
-    height:600px;
+    height:500px;
     left:35%;
 }
 h1{
@@ -23,7 +23,7 @@ form{
     height: 600px;
 }
 
-.en-ligne{
+.en_ligne{
     display: inline;
 }
 

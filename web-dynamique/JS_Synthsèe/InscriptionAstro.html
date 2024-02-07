@@ -1,46 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/JS_Synthsèe/css/style.css">
-    <script src="/JS_Synthsèe/js/script.js"></script>
+    <script src="/JS_Synthsèe/js/script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <div id="generale">
     <h1>EVALUTATION COURS JAVASCRIPT</h1>
-    <Form action="/JS_Synthsèe/InscriptionAstro.html">
+    <Form action="/JS_Synthsèe/InscriptionAstro.html" id="form">
                 <h2>Formulaire avec traitement Javascript</h2>
-                <textarea cols="50" rows="5">Zone de texte libre</textarea>
+                <textarea cols="50" rows="5" name="bigtext">Zone de texte libre</textarea>
                 <br>
                 <br>
             <div id="premiere">
-                <p class="en-ligne">Nom d'utilisateur :</p>
-                <input type="text" class="en-ligne">
+                <p class="en_ligne">Nom d'utilisateur :</p>
+                <input type="text" class="en-ligne" name="nom" required>
             </div>
             <div id="deuxieme">
-                <p class="en-ligne">Prénom :</p>
-                <input class="en-ligne" type="text">
-                <p class="en-ligne">Email :</p>
-                <input class="en-ligne" type="email">
+                <p class="en_ligne">Prénom :</p>
+                <input class="en_ligne" type="text" name="prenom" required>
+                <p class="en_ligne">Email :</p>
+                <input class="en_ligne" type="email" name="email" required>
             </div>
             <div id="troisieme">
-                <p class="en-ligne">Jour :</p>
-                <input class="en-ligne"  id="input-jour" type="number" max="31">
-                <p class="en-ligne">Mois :</p>
-                <input class="en-ligne"  id="input-mois" type="number" max="12">
-                <p class="en-ligne">Année :</p>
-                <input class="en-ligne" id="input-annee" type="number" min="1900" max="2050">
+                <label class="en_ligne" id="label_jour">Jour :
+                    <select name="jour" id="select_jour"></select>
+                </label>
+                <label class="en_ligne" id="label_mois">Mois :
+                    <select name="mois" id="select_mois"></select>
+                </label>
+                <label class="en_ligne" id="label_annee">Annee :
+                    <select name="annee" id="select_annee"></select>
+                </label>
             </div>
-            <p class="en-ligne">Votre pseudo :</p>
-            <input class="en-ligne" type="text">
+            <p class="en_ligne">Votre pseudo :</p>
+            <input class="en_ligne" type="text" id="pseudo" name="pseudo" readonly>
             <br>
             <br>
             <div id="boutons">
                 <input type="submit" value="Validation">
                 <br>
-                <button>Annuler</button>
+                <input type="reset" value="Annuler">
             </div>
     </Form>
     </div>
