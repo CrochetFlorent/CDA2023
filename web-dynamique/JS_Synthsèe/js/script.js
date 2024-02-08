@@ -56,10 +56,9 @@ for(let i=1900;i<=2050;i++)
     document.querySelector("#select_annee").appendChild(monOption);
 }
 
-let bigtext = document.querySelector('textarea[name="bigtext"]');
 let jour = document.querySelector('select[name="jour"]');
 let mois = document.querySelector('select[name="mois"]');
-let annee = document.querySelector('select[name="email"]');
+let annee = document.querySelector('select[name="annee"]');
 let prenom = document.querySelector('input[name="prenom"]');
 let nom = document.querySelector('input[name="nom"]');
 let pseudo = document.querySelector('input[name="pseudo"]');
@@ -81,7 +80,16 @@ function sommeChaine(chaine)
 let tabSignes = ["Capricorne","Verseau","Poisson","Belier","Taureau","Gémeaux","Cancer","Lion","Vierge","Balance","Scorpion","Sagittaire"];
 
 function signeAstro(){
-    return tabSignes[mois.value];
+    let month = mois.value;
+    if(month == 11 && jour.value>21)
+    {
+        month = 0;
+    }
+    else if(jour.value>21)
+    {
+        month = mois.value+1;
+    }
+    return tabSignes[month];
 }
 
 function formok(){
@@ -103,8 +111,54 @@ function calculerPseudo(){
 }
 
 
-function renseignerCookies(){
-    document.cookie ="Texte: "+bigtext.value+" Nom: "+nom.value+" Prenom: "+prenom.value+" Email: "+email.value;
+function Valider(){
+    setCookie("Nom",nom.value);
+    setCookie("Prenom",prenom.value);
+    setCookie("Pseudo",pseudo.value);
+    setCookie("Email",email.value);
+    setCookie("Date de naissance",jour.value+"/"+mois.value+"/"+annee.value);
+    // document.cookie ="Texte="+bigtext.value+"; Expires="+
+    // document.cookie ='Nom='+nom.value;
+    // document.cookie='Prenom='+prenom.value;
+    // document.cookie='Email='+email.value;
+    // document.cookie='Date de naissance='+jour.value+"/"+mois.value+"/"+annee.value;
 }
 
-document.addEventListener("focusout",renseignerCookies);
+function setCookie(_nom,_valeur){
+    let time = new Date();
+    let timeCookie = new Date(time.getFullYear(),time.getMonth(),time.getDate(),(time.getHours()+1),time.getMinutes(),(time.getSeconds()+120));
+    timeCookie = timeCookie.toUTCString();    
+    document.cookie = _nom+"="+_valeur+"; Expires="+timeCookie+"; SameSite=Strict; Secure";
+}
+
+function getCookie(name){
+      let monTabCookie = document.cookie.split('; ');
+      let maValeur={};
+      let i=0;
+    for (let index = 0; index < monTabCookie.length; index++) 
+    {
+         maValeur[index]= monTabCookie[index].split(`=`);
+        
+    }
+    return maValeur[name];
+}
+
+function getCookie2(name) {
+    let cookie = {};
+    document.cookie.split(';').forEach(function(el) {
+      let split = el.split('=');
+      cookie[split[0].trim()] = split.slice(1).join("=");
+    })
+    return cookie[name];
+  }
+
+let btnValider = document.querySelector("submit");
+
+function nbJoursAnniv(anniv){
+    let maDate = new Date(time.getFullYear(),time.getMonth(),time.getDate());
+}
+
+document.addEventListener("focusout",function(){
+    calculerPseudo();
+    Valider();
+});

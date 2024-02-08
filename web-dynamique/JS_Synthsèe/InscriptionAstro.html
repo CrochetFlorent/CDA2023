@@ -16,23 +16,26 @@
                 <br>
                 <br>
             <div id="premiere">
-                <p class="en_ligne">Nom d'utilisateur :</p>
-                <input type="text" class="en-ligne" name="nom" required>
+                <label for="nom" class="en_ligne">Nom :
+                    <input class="en_ligne" type="text" name="nom" required>
+                </label>    
             </div>
             <div id="deuxieme">
-                <p class="en_ligne">Prénom :</p>
-                <input class="en_ligne" type="text" name="prenom" required>
-                <p class="en_ligne">Email :</p>
-                <input class="en_ligne" type="email" name="email" required>
+                <label for="prenom" class="en_ligne">Prenom :
+                    <input class="en_ligne" type="text" name="prenom" required>
+                </label>    
+                <label for="email" class="en_ligne" id="label_jour">Email :
+                    <input class="en_ligne" type="email" name="email" required>
+                 </label>
             </div>
             <div id="troisieme">
-                <label class="en_ligne" id="label_jour">Jour :
+                <label for="select_jour" class="en_ligne">Jour :
                     <select name="jour" id="select_jour"></select>
                 </label>
-                <label class="en_ligne" id="label_mois">Mois :
+                <label for="select_mois" class="en_ligne">Mois :
                     <select name="mois" id="select_mois"></select>
                 </label>
-                <label class="en_ligne" id="label_annee">Annee :
+                <label for="select_annee" class="en_ligne" id="label_annee">Annee :
                     <select name="annee" id="select_annee"></select>
                 </label>
             </div>
