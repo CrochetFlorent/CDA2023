@@ -116,7 +116,7 @@ function Valider(){
     setCookie("Prenom",prenom.value);
     setCookie("Pseudo",pseudo.value);
     setCookie("Email",email.value);
-    setCookie("Date de naissance",jour.value+"/"+mois.value+"/"+annee.value);
+    setCookie("Date de naissance",jour.value+"-"+mois.value+"-"+annee.value);
     // document.cookie ="Texte="+bigtext.value+"; Expires="+
     // document.cookie ='Nom='+nom.value;
     // document.cookie='Prenom='+prenom.value;
@@ -158,7 +158,12 @@ function nbJoursAnniv(anniv){
     let maDate = new Date(time.getFullYear(),time.getMonth(),time.getDate());
 }
 
+
 document.addEventListener("focusout",function(){
     calculerPseudo();
+});
+document.addEventListener("submit",function(){
+    calculerPseudo();
     Valider();
+    open("./Accueil.html");
 });
