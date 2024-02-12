@@ -4,22 +4,23 @@
 let form = document.querySelector('form');
 let troisieme = document.getElementById("troisieme");
 
-let tabMois =["Janvier","Fevrier","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"]
-
 const monOptionJour = document.createElement("option");
 monOptionJour.setAttribute("hidden","");
+monOptionJour.setAttribute("value","");
 monOptionJour.textContent = "Jour";
 document.querySelector("#select_jour").appendChild(monOptionJour);
 
 
 const monOptionMois = document.createElement("option");
 monOptionMois.setAttribute("hidden","");
+monOptionMois.setAttribute("value","");
 monOptionMois.textContent = "Mois";
 document.querySelector("#select_mois").appendChild(monOptionMois);
 
 
 const monOptionAnnee = document.createElement("option");
 monOptionAnnee.setAttribute("hidden","");
+monOptionAnnee.setAttribute("value","");
 monOptionAnnee.textContent = "Annee";
 document.querySelector("#select_annee").appendChild(monOptionAnnee);
 
@@ -35,6 +36,8 @@ for(let i=1;i<=31;i++)
     document.querySelector("#select_jour").appendChild(monOption);
 }
 
+let tabMois =["Janvier","Fevrier","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"]
+
 for(let i=0;i<12;i++)
 {
     // eval(`var input${i} = document.createElement("select");`)
@@ -46,7 +49,7 @@ for(let i=0;i<12;i++)
     document.querySelector("#select_mois").appendChild(monOption);
 }
 
-for(let i=1900;i<=2050;i++)
+for(let i=1970;i<=2050;i++)
 {
     // eval(`var input${i} = document.createElement("select");`)
     // eval(`input${i}`).appendChild(troisieme);
@@ -63,6 +66,7 @@ let prenom = document.querySelector('input[name="prenom"]');
 let nom = document.querySelector('input[name="nom"]');
 let pseudo = document.querySelector('input[name="pseudo"]');
 let email = document.querySelector('input[name="email"]');
+let inputValider = document.querySelector('#valider');
 
 
 function sommeChaine(chaine)
@@ -107,6 +111,7 @@ function formok(){
 
 
 function calculerPseudo(){
+    inputValider.removeAttribute("Disabled");
     pseudo.value= signeAstro()+sommeChaine(prenom.value)+sommeChaine(nom.value);
 }
 
@@ -126,44 +131,20 @@ function Valider(){
 
 function setCookie(_nom,_valeur){
     let time = new Date();
-    let timeCookie = new Date(time.getFullYear(),time.getMonth(),time.getDate(),(time.getHours()+1),time.getMinutes(),(time.getSeconds()+120));
+    let timeCookie = new Date(time.getFullYear(),time.getMonth(),time.getDate(),(time.getHours()+1),time.getMinutes(),(time.getSeconds()+240));
     timeCookie = timeCookie.toUTCString();    
     document.cookie = _nom+"="+_valeur+"; Expires="+timeCookie+"; SameSite=Strict; Secure";
 }
 
-function getCookie(name){
-      let monTabCookie = document.cookie.split('; ');
-      let maValeur={};
-      let i=0;
-    for (let index = 0; index < monTabCookie.length; index++) 
+document.addEventListener("input",function(){
+    if(nom.value!="" && prenom.value!="" && email.value!="" && jour.value!="" && mois.value!="" && annee.value!="")
     {
-         maValeur[index]= monTabCookie[index].split(`=`);
-        
+        calculerPseudo();
+        Valider(); 
     }
-    return maValeur[name];
-}
-
-function getCookie2(name) {
-    let cookie = {};
-    document.cookie.split(';').forEach(function(el) {
-      let split = el.split('=');
-      cookie[split[0].trim()] = split.slice(1).join("=");
-    })
-    return cookie[name];
-  }
-
-let btnValider = document.querySelector("submit");
-
-function nbJoursAnniv(anniv){
-    let maDate = new Date(time.getFullYear(),time.getMonth(),time.getDate());
-}
-
-
-document.addEventListener("focusout",function(){
-    calculerPseudo();
 });
+
 document.addEventListener("submit",function(){
-    calculerPseudo();
     Valider();
     open("./Accueil.html");
 });

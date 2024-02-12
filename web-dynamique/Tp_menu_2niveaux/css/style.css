@@ -1,0 +1,63 @@
+
+#ul_menu>li{
+    display : inline;
+    list-style-type: none;
+    background-color: rgb(0,125,2);
+    color:white;
+    margin-right: 2px;
+}
+
+#menu{
+    position: relative;
+    left:7%;
+}
+
+#logo{
+    width:33%;
+    height: 200px;
+}
+
+#banniere{
+    width: 66%;
+    height: 200px;
+}
+
+header{
+    background-color: rgb(83,175,52);
+    position:relative;
+}
+
+header>nav>ul{
+    padding-inline-start: 0;
+    margin: 0;
+}
+
+main{
+    display:flex;
+    flex-direction: row; 
+}
+
+#centre1{
+    background-color: black;
+}
+#centre1>ul{
+    list-style-type: none;
+}
+
+#centre1>ul>li{
+    padding: 10px;
+    color: rgb(138,61,48);
+}
+
+#centre3{
+    background-color: black;
+}
+
+#centre3>ul>li{
+    list-style-type: none;
+    padding: 1px;
+    color: white;
+}
+
+
+
