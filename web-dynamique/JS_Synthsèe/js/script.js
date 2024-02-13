@@ -44,7 +44,7 @@ for(let i=0;i<12;i++)
     // eval(`input${i}`).appendChild(troisieme);
 
     let monOption = document.createElement("option");
-    monOption.value = i;
+    monOption.value = (i+1);
     monOption.textContent = tabMois[i];
     document.querySelector("#select_mois").appendChild(monOption);
 }
@@ -84,7 +84,7 @@ function sommeChaine(chaine)
 let tabSignes = ["Capricorne","Verseau","Poisson","Belier","Taureau","Gémeaux","Cancer","Lion","Vierge","Balance","Scorpion","Sagittaire"];
 
 function signeAstro(){
-    let month = mois.value;
+    let month = mois.value-1;
     if(month == 11 && jour.value>21)
     {
         month = 0;
@@ -129,6 +129,55 @@ function Valider(){
     // document.cookie='Date de naissance='+jour.value+"/"+mois.value+"/"+annee.value;
 }
 
+function getCookie(name){
+    let monTabCookie = document.cookie.split('; ');
+    let monTabValeurs=[];
+    let maValeur;
+  for (let index = 0; index < monTabCookie.length; index++) 
+  {
+       monTabValeurs= monTabCookie[index].split(`=`);
+       if(monTabValeurs[0] == name)
+       {
+           maValeur = monTabValeurs[1];     
+           break;
+       }        
+  }
+    return maValeur.trim();
+}
+
+function nbJoursAnniv(){
+    let dateJour=new Date();
+    let tabNaissance = getCookie("Date de naissance").split("-");
+    let dateNaissance = new Date(tabNaissance[0],tabNaissance[1],tabNaissance[2]);
+    let joursAvantAnniv ;
+    
+    let anneeToday = dateJour.getFullYear();
+    let moisToday = dateJour.getMonth();
+    let jourToday = dateJour.getDate();
+
+    let anneeNaissance = dateJour.getFullYear();
+    let moisNaissance = dateJour.getMonth();
+    let jourNaissance = dateJour.getDate();
+
+      if(dateJour.getMonth() > dateNaissance.getMonth())
+      {
+          dateAnniv = new Date((anneeToday+1)+"-"+moisNaissance+"-"+jourNaissance);
+          console.log(dateAnniv);
+      }
+      else
+      {
+          dateAnniv = new Date(anneeToday+"-"+moisNaissance+"-"+jourNaissance);
+          console.log(dateAnniv);
+      }
+      
+    dateAnniv = Date.parse(dateAnniv);
+    console.log(dateAnniv);
+    joursAvantAnniv = (dateJour - dateAnniv)/(1000*3600*24);
+    console.log(joursAvantAnniv);
+
+    return  joursAvantAnniv;
+  }
+
 function setCookie(_nom,_valeur){
     let time = new Date();
     let timeCookie = new Date(time.getFullYear(),time.getMonth(),time.getDate(),(time.getHours()+1),time.getMinutes(),(time.getSeconds()+240));
@@ -142,6 +191,7 @@ document.addEventListener("input",function(){
         calculerPseudo();
         Valider(); 
     }
+    nbJoursAnniv();
 });
 
 document.addEventListener("submit",function(){

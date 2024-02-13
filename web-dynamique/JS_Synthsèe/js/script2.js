@@ -15,24 +15,29 @@ for (let index = 0; index < monTabCookie.length; index++)
   return maValeur.trim();
 }
 
+
   function nbJoursAnniv(){
-    
     let dateJour=new Date();
-    console.log("datejour:" +dateJour);
+    let tabNaissance = getCookie("Date de naissance").split("-");
+    let dateNaissance = new Date(tabNaissance[2],(tabNaissance[1]-1),tabNaissance[0]);
+console.log(dateNaissance);
+    let joursAvantAnniv ;
+     let dateAnniv =new Date(dateJour.getFullYear(),dateNaissance.getMonth(),dateNaissance.getDate());
+      if(dateJour > dateAnniv)
+      {
 
-    let tabDateDeNaissance = getCookie("Date de naissance").split();
-    interval = Date.parse(tabDateDeNaissance[2]+"-"+tabDateDeNaissance[1]+"-"+tabDateDeNaissance[0]);
-
-
-    let temp;
-    let annees;
-
-    temp = dateJour.getTime() - interval; 
-       
-    temp = temp/(1000*3600*24);
-
-    return  temp.toFixed(2);
+          dateAnniv = new Date((dateJour.getFullYear()+1),dateNaissance.getMonth(),dateNaissance.getDate());
+      }
+     
+      
+      dateAnniv = dateAnniv.getTime();
+      
+    console.log(dateAnniv);
+    joursAvantAnniv = (dateAnniv-dateJour)/(1000*3600*24);
+    
+    return  Math.ceil(joursAvantAnniv,0);
   }
+
 
   function ecrireAccueil()
   {
@@ -41,10 +46,15 @@ for (let index = 0; index < monTabCookie.length; index++)
     document.getElementById("pseudo").innerText = getCookie("Pseudo");
     document.getElementById("email").innerText = getCookie("Email");
     document.getElementById("date_de_naissance").innerText = getCookie("Date de naissance");
-    document.querySelector("#jours_avant_anniv").innerText= nbJoursAnniv();
+    let montab =getCookie("Date de naissance").split('-');
+    console.log(montab[0]) ;
+    document.getElementById("jours_avant_anniv").innerText= nbJoursAnniv();
     
   }
 
-ecrireAccueil();
-addEventListener("focusout",nbJoursAnniv);
+
+document.addEventListener("DOMContentLoaded",function(){
+  ecrireAccueil();
+  
+})
   //intervalle entre (naissance et aujourd'hui) = intervalle entre (origine et aujourd'hui) - intervalle entre (origine et naissance)
