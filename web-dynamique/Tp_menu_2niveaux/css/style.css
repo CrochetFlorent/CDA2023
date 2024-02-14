@@ -2,55 +2,122 @@ body{
     background-color: rgb(204,238,187);
 }
 
-#ul_menu{
-    width : 70%;
+header{
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;;
+}
+header div{
+    display: flex;
+    flex-direction: row;
 }
 
-#ul_menu>li{
+#ul_menu{
+    width: 81%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(0,125,2);
+}
+
+#ul_menu>li{ 
+    position: relative;
     display : inline-block;
     list-style-type: none;
     background-color: rgb(0,125,2);
     color:white;
-    margin-right: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+    border-right: 2px rgb(203,216,136) dotted;
+}
+
+#ul_menu>li:first-child{
+    border-left: 2px rgb(203,216,136) dotted;
+   
+}
+
+#ul_menu ul li{
+    border-top: 2px rgb(203,216,136) dotted;
+    border-left: 2px rgb(203,216,136) dotted;
+    border-right: 2px rgb(203,216,136) dotted;
+}
+
+#ul_menu ul li:last-child{
+   
+    border-bottom: 2px rgb(203,216,136) dotted;;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul ul li{
+ 
+    padding: 3px;
+   
+}
+ul li ul {
+    position: absolute;
+    display: none;
+    left:-5%;
 }
 
 main{
     display:flex;
     flex-direction: row;
     background-color: rgb(203,216,136);
-    padding-left: 2px;
-    height:80%;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#menu{
-    position: relative;
-    left:7%;
-}
+
 
 ul li ul li{
     list-style-type: none; 
+    position: relative;
 }
+
 ul li:hover ul{
     display: block;
-    position: absolute;
+}
+ul li:hover ul ul{
+    display: none;
+}
+
+
+ul li:hover ul{
+    display: block;
+    
     background-color: rgb(0,125,2);
 }
+
+ul li ul li:hover{
+    background-color: rgb(78,177,55);
+}
+ul ul li:hover ul {
+    display: block;
+    left:100%;
+    top:0;
+}
+
+
 ul li ul {
     display:none;
 }
+
 
 h1{
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #logo{
-    width:33%;
-    height: 200px;
+    width:335px;
+   
 }
 
 #banniere{
-    width: 66%;
-    height: 200px;
+    width: 640px;
 }
 
 header{
@@ -129,4 +196,12 @@ header>nav>ul{
 footer{
     height: 80px;
     background-color: rgb(0,125,2);
+}
+
+a{
+    color: aqua;
+}
+
+a:visited{
+    color:crimson;
 }
