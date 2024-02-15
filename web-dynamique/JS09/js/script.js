@@ -16,7 +16,7 @@ function lireCouleur(){
 }
 
     document.addEventListener("DOMContentLoaded", lireCouleur);
-    document.addEventListener("focusout",function(event){
+    document.addEventListener("input",function(event){
             switch (event.target.name)
             {
                 case "couleur1":
@@ -55,16 +55,16 @@ function lireCouleur(){
         lireCouleur();
     });
 
-    monBtnRouge = document.querySelector("#vert-button");
-    monBtnRouge.addEventListener("click",function(){  
+    monBtnVert = document.querySelector("#vert-button");
+    monBtnVert.addEventListener("click",function(){  
         document.getElementById("rouge").value = "00";
         document.getElementById("vert").value = "FF";
         document.getElementById("bleu").value = "00";
         lireCouleur();
     });
 
-    monBtnRouge = document.querySelector("#bleu-button");
-    monBtnRouge.addEventListener("click",function(){  
+    monBtnBleu = document.querySelector("#bleu-button");
+    monBtnBleu.addEventListener("click",function(){  
         document.getElementById("rouge").value = "00";
         document.getElementById("vert").value = "00";
         document.getElementById("bleu").value = "FF";

@@ -7,28 +7,36 @@ function recupererJson()
             if(reponse.status==200){
                 const jsonpromise = reponse.json().then((json) => {
                     console.log(json);
-                creerSuggestions(json);
-                document.querySelector("#code_postal").addEventListener("input",function(){creerSuggestions});    
+                
+                document.querySelector("#code_postal").addEventListener("input",function(){creerSuggestions(json)});    
                 })}})
     .catch(function(reject){console.log("Error")})};
 
     
 
-function creerSuggestions(villes){
-    let inputCode = document.querySelector("#code_postal");
+function creerSuggestions(_villes){
+    let inputValue = document.querySelector("#code_postal").value;
 
-    for(let i=0; i < villes.length;i++)
+    for(let i=0; i < _villes.length;i++)
     {
-        if(villes[i].codePostal == inputCode.textContent)
-        {
-                let option = document.createElement("option");
-                option.textContent =villes[i];
-                document.querySelector("#villes").appendChild(option);
-        }
+        
+        
+            if ( _villes[i]["codePostal"].includes(inputValue) ) {
+                
+                for (let key in _villes[i]) {
+
+                    console.log( _villes[i].key);
+                }
+                
+            }
+        
+
+
+       
     }
 }
 
-document.addEventListener("DOMContentLoaded",recupererJson);
+
 
 
     
