@@ -17,3 +17,7 @@ td{
     column-width: 100px;
     text-align: center;
 }
+
+.div_principale{
+    position: relative;
+}
