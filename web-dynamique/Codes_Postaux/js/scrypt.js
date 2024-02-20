@@ -1,42 +1,39 @@
 
-function recupererJson()
+async function recupererJson()
 {
-    const fetchPromise = fetch(
-    "https://arfp.github.io/tp/web/javascript/02-zipcodes/zipcodes.json")
-    .then((reponse)=>{
-            if(reponse.status==200){
-                const jsonpromise = reponse.json().then((json) => {
-                    console.log(json);
-                
-                document.querySelector("#code_postal").addEventListener("input",function(){creerSuggestions(json)});    
-                })}})
-    .catch(function(reject){console.log("Error")})};
+    const reponse = await fetch("https://arfp.github.io/tp/web/javascript/02-zipcodes/zipcodes.json")
+    const data = await reponse.json();
 
-    
+    return data;
+}
 
-function creerSuggestions(_villes){
-    let inputValue = document.querySelector("#code_postal").value;
+for(let i=0;i<_data.length;i++)
+{
+    let datalistVilles = document.querySelector("#villes");
+    // eval(`var input${i} = document.createElement("select");`)
+    // eval(`input${i}`).appendChild(troisieme);
+    let monOption = document.createElement("option");
+    monOption.value = _data[i].
+    monOption.textContent = i;
+    document.querySelector("#select_jour").appendChild(monOption);
+}
 
-    for(let i=0; i < _villes.length;i++)
+function creerSuggestions(_data){
+    let input = document.querySelector("#code_postal");
+
+    for(let i=0;i<_data.length;i++)
     {
-        
-        
-            if ( _villes[i]["codePostal"].includes(inputValue) ) {
-                
-                for (let key in _villes[i]) {
-
-                    console.log( _villes[i].key);
-                }
+            if(_data[i].codePostal.includes(input.value))
+            {
                 
             }
-        
-
-
-       
     }
 }
 
-
+document.addEventListener("focusout",async function(){
+    const test = await recupererJson();
+    creerSuggestions(test);
+});
 
 
     
