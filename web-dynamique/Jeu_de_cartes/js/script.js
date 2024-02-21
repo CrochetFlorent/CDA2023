@@ -53,7 +53,7 @@ function sortByValue(_data,param){
     return tri[0];
 }
 
-function creerImage(_best,_Ofbest){
+function creerImage(_best){
 
     let div_Principale = document.createElement("div");
     div_Principale.className = "div_principale";
