@@ -1,0 +1,59 @@
+:root{
+    font-size: 62.5%;
+}
+
+table{
+    border: 1px solid #ccf7cc;
+    background-color: white;
+    width: 600px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+th{
+    font-size: 1.6em;
+    padding:4px;
+}
+
+legend{
+    font-size: 3em;
+    padding-bottom: 50px;
+    color: #026502;
+    font-weight:  bold;
+}
+td{
+    font-size: 1.6em;
+    border: 1px solid white;
+    padding: 4px;
+    background-color: #90ee90;
+}
+th{
+    font-size: 1.6em;
+    border: 1px solid white;
+    background-color: #90ee90;
+}
+
+fieldset{
+    border: 2px solid #80b280;
+    width: 900px;
+}
+label{
+    display: block;
+    margin-bottom: 20px;
+}
+
+#span_modif{
+    padding-bottom: 30px;
+    font-size: 1.6em;
+}
+
+p{
+    margin-left: 30px;
+    font-size: 1.6em;
+}
+
+input{
+    margin-left: 30px;
+    background-color: #90ee90;
+}
+

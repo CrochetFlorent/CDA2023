@@ -18,22 +18,22 @@ async function remplirTableau() {
     let mykeys = [];
 
     for (const key in _data[0]) {
-        let myCell = document.createElement('th');
+        let myTh = document.createElement('th');
 
-        myCell.textContent = key;
+        myTh.textContent = key;
         mykeys.push(key);
-        myFirstRow.appendChild(myCell);
+        myFirstRow.appendChild(myTh);
     }
 
     let myTBody = mytable.createTBody();
-    let mySecondRow = myTBody.insertRow();
 
-       for (let i = 0; i < _data.length; i++) {
+       for (let i = 0; i < _data.length; i++) 
+       {
         let myNextRow = myTBody.insertRow();
 
         for (let j = 0; j < mykeys.length; j++) {
-            let myCell = myNextRow.insertCell();
-            myCell.textContent = _data[i][mykeys[j]];        
+            let myTh = myNextRow.insertCell();
+            myTh.textContent = _data[i][mykeys[j]];        
         }
     }
 
