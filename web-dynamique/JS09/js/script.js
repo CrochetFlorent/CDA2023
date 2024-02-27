@@ -15,7 +15,6 @@ function lireCouleur(){
     document.body.setAttribute("style", "background-color:" + chaineCouleur);
 }
 
-    document.addEventListener("DOMContentLoaded", lireCouleur);
     document.addEventListener("input",function(event){
             switch (event.target.name)
             {
@@ -42,7 +41,6 @@ function lireCouleur(){
                         return;
                     }
                 break;
-
             }
             lireCouleur();
     });

@@ -12,39 +12,36 @@
     <h1>EVALUTATION COURS JAVASCRIPT</h1>
     <Form action="/JS_Synthsèe/InscriptionAstro.html" id="form">
                 <h2>Formulaire avec traitement Javascript</h2>
-                <textarea cols="50" rows="5" name="bigtext">Zone de texte libre</textarea>
-                <br>
-                <br>
+                <textarea cols="50" rows="5" name="zone_texte_libre" id="zone_texte_libre">Zone de texte libre</textarea>
+
             <div id="premiere">
-                <label for="nom" class="en_ligne">Nom :
-                    <input class="en_ligne" type="text" name="nom" required>
+                <label for="input_nom" class="en_ligne">Nom :
+                    <input class="en_ligne" type="text" id="input_nom" required>
                 </label>    
             </div>
             <div id="deuxieme">
-                <label for="prenom" class="en_ligne">Prenom :
-                    <input class="en_ligne" type="text" name="prenom" required>
+                <label class="en_ligne">Prenom :
+                    <input class="en_ligne" type="text" id="input_prenom" required>
                 </label>    
-                <label for="email" class="en_ligne" id="label_jour">Email :
-                    <input class="en_ligne" type="email" name="email" required>
+                <label class="en_ligne">Email :
+                    <input class="en_ligne" type="email" id="input_email" required>
                  </label>
             </div>
             <div id="troisieme">
-                <label for="select_jour" class="en_ligne">Jour :
-                    <select name="jour" id="select_jour"></select>
+                <label class="en_ligne">Jour :
+                    <select id="select_jour"></select>
                 </label>
-                <label for="select_mois" class="en_ligne">Mois :
-                    <select name="mois" id="select_mois"></select>
+                <label class="en_ligne">Mois :
+                    <select id="select_mois"></select>
                 </label>
-                <label for="select_annee" class="en_ligne" id="label_annee">Annee :
-                    <select name="annee" id="select_annee"></select>
+                <label class="en_ligne" id="label_annee">Annee :
+                    <select id="select_annee"></select>
                 </label>
             </div>
             <p class="en_ligne">Votre pseudo :</p>
-            <input class="en_ligne" type="text" id="pseudo" name="pseudo" readonly>
-            <br>
-            <br>
+            <input class="en_ligne" type="text" id="input_pseudo" readonly>
             <div id="boutons">
-                <input type="submit" value="Validation" id="valider" disabled="true">
+                <input type="submit" value="Validation" id="input_valider" disabled="true">
                 <br>
                 <input type="reset" value="Annuler">
             </div>

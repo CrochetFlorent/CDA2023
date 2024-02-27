@@ -2,6 +2,7 @@ function getCookie(name){
   let monTabCookie = document.cookie.split('; ');
   let monTabValeurs=[];
   let maValeur;
+
 for (let index = 0; index < monTabCookie.length; index++) 
 {
      monTabValeurs= monTabCookie[index].split(`=`);
@@ -20,7 +21,6 @@ for (let index = 0; index < monTabCookie.length; index++)
     let dateJour=new Date();
     let tabNaissance = getCookie("Date de naissance").split("-");
     let dateNaissance = new Date(tabNaissance[2],(tabNaissance[1]-1),tabNaissance[0]);
-console.log(dateNaissance);
     let joursAvantAnniv ;
      let dateAnniv =new Date(dateJour.getFullYear(),dateNaissance.getMonth(),dateNaissance.getDate());
       if(dateJour > dateAnniv)

@@ -32,4 +32,4 @@ function setValuesFocusOut()
 
 
 document.addEventListener("DOMContentLoaded",setValuesOnLoad);
-document.addEventListener("focusout",setValuesFocusOut);
+document.addEventListener("input",setValuesFocusOut);

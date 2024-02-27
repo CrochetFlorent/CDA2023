@@ -1,6 +1,7 @@
 body{
     background-color: rgb(245,233,217);
 }
+
 #generale{
     position: relative;
     border: 4px white solid;
@@ -9,13 +10,15 @@ body{
     height:500px;
     left:35%;
 }
+
 h1{
     position: relative;
-    margin:0;
+    margin: 0;
     text-align: center;
     background-color: rgb(138,158,195);
     border-radius: 3rem 3rem 0 0;
 }
+
 form{
     position: relative;
     left: 5%;;
@@ -23,6 +26,9 @@ form{
     height: 600px;
 }
 
+#zone_texte_libre{
+    margin-bottom: 20px;
+}
 .en_ligne{
     display: inline;
 }
@@ -39,10 +45,14 @@ form{
     padding-bottom: 40px;
 }
 
-#input-jour{
+#input_jour{
     width: 100px;
 }
 
-#input-mois{
+#input_mois{
     width: 100px;
+}
+
+#input_pseudo{
+    margin-bottom: 10px;
 }

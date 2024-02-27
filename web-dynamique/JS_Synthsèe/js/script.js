@@ -1,6 +1,5 @@
 
 
-/**@param {string} chaine */
 let form = document.querySelector('form');
 let troisieme = document.getElementById("troisieme");
 
@@ -59,14 +58,14 @@ for(let i=1970;i<=2050;i++)
     document.querySelector("#select_annee").appendChild(monOption);
 }
 
-let jour = document.querySelector('select[name="jour"]');
-let mois = document.querySelector('select[name="mois"]');
-let annee = document.querySelector('select[name="annee"]');
-let prenom = document.querySelector('input[name="prenom"]');
-let nom = document.querySelector('input[name="nom"]');
-let pseudo = document.querySelector('input[name="pseudo"]');
-let email = document.querySelector('input[name="email"]');
-let inputValider = document.querySelector('#valider');
+let jour = document.querySelector("#select_jour");
+let mois = document.querySelector("#select_mois");
+let annee = document.querySelector("#select_annee");
+let prenom = document.querySelector("#input_prenom");
+let nom = document.querySelector("#input_nom");
+let pseudo = document.querySelector("#input_pseudo");
+let email = document.querySelector("#input_email");
+let inputValider = document.querySelector("#input_valider");
 
 
 function sommeChaine(chaine)
@@ -162,18 +161,14 @@ function nbJoursAnniv(){
       if(dateJour.getMonth() > dateNaissance.getMonth())
       {
           dateAnniv = new Date((anneeToday+1)+"-"+moisNaissance+"-"+jourNaissance);
-          console.log(dateAnniv);
       }
       else
       {
           dateAnniv = new Date(anneeToday+"-"+moisNaissance+"-"+jourNaissance);
-          console.log(dateAnniv);
       }
       
     dateAnniv = Date.parse(dateAnniv);
-    console.log(dateAnniv);
     joursAvantAnniv = (dateJour - dateAnniv)/(1000*3600*24);
-    console.log(joursAvantAnniv);
 
     return  joursAvantAnniv;
   }
@@ -186,6 +181,7 @@ function setCookie(_nom,_valeur){
 }
 
 document.addEventListener("input",function(){
+    
     if(nom.value!="" && prenom.value!="" && email.value!="" && jour.value!="" && mois.value!="" && annee.value!="")
     {
         calculerPseudo();

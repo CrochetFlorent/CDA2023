@@ -17,13 +17,6 @@ function creerOptions(_data){
     });
 }
 
-function deleteOption(){
-    const dataList = document.querySelector("#villes");
-    for (var i=0; i<_data.length;i++)  {
-        dataList.remove(element);
-    }
-}
-
 const test = await recupererJson();
 
 document.addEventListener("input",function(){
