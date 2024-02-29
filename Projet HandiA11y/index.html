@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Page d'accueil</title>
+    <title>Page d'accueil - HandiA11y</title>
 </head>
 <body>
     <header role="banner">
-        <a href="#main" id="main_link">Aller au contenu</a>
+        <a href="#main" id="main_link" >Aller au contenu</a>
         <nav class="menu" role="navigation">
             <img src="/images/a11yNow.png" alt="Logo de la société HandiAlly"  class="logo">
             <ul class="menu_list" role="list">
@@ -26,11 +26,11 @@
         </nav>
     </header>
     <main id="main" role="main">
-        <section role="region">
+        <section role="region" id="section_description">
             <h1>Bienvenue sur HaniA11y</h1>
             <p>HandiA11y est un site spécialisé pour découvrir les bases de l'accessibilité web et les différents handicaps à prendre en compte.</p>
             <h2>Pourquoi A11y et pas A11é ?</h2>
-            <p>A11É est une abréviation pour accessibilité où 11 représente le nombre de lettres entre le a et le é du mot accessibilité.
+            <p>A11y est une abréviation pour accessibilité où 11 représente le nombre de lettres entre le a et le é du mot accessibilité.
                 Cette même abbréviation dans sa version anglaise est plus jolie à l'oreille : A11Y</p>
             <h2>Quelle est l'origine du mot HANDICAP ?</h2>
             <p>Le mot handicap trouve son origine dans l'anglais médiéval. Il est dérivé de l'expression hand in cap, qui signifie main dans le chapeau. 
@@ -38,35 +38,35 @@
                 Au fil du temps, le terme a été adopté dans d'autres contextes pour décrire une situation où une personne est désavantagée ou limitée dans ses capacités physiques,
                 mentales ou sociales.</p>
         </section>
-        <section role="region">
+        <section role="region" >
             <h2>Le WCAG et les 4 principes A11y</h2>
-            <ul id="principes_wcag" role="list">
-                <li>
+            <div id="div_principes">
+                <article>
                     <h3>Perceptible</h3>
                         <p>Les informations et les composants de l'interface utilisateur doivent être perceptibles pour tous les utilisateurs, 
                             y compris ceux ayant des limitations sensorielles.</p>
-                </li>
-                <li>
+                </article>
+                <article>
                     <h3>Utilisable</h3>
                         <p>Les composants de l'interface utilisateur doivent être utilisables par tous les utilisateurs, 
                             y compris ceux ayant des limitations physiques ou cognitives.</p>
-                </li>
-                <li>
+                </article>
+                <article>
                     <h3>Compréhensible</h3>
                         <p>Les informations et les opérations doivent être compréhensibles pour tous les utilisateurs, 
                             y compris ceux ayant des limitations cognitives.</p>
 
-                </li>
-                <li>
+                        </article>
+                <article>
                     <h3>Robuste</h3>
                         <p>
                             Le contenu doit être robuste et fonctionnel sur différentes plateformes, 
                             y compris les technologies d'assistance, pour tous les utilisateurs.</p>
-                </li>
-            </ul>
+                </article>
+            </div>
         </section>
-        <section role="region">
-            <h3>Critères</h3>
+        <section role="region" id="section_criteres">
+            <h2>Critères</h2>
             <table id="tableau_criteres">
                 <caption>Les critères WCAG 2.1 sous forme de tableau</caption>
                 <thead>
@@ -157,7 +157,7 @@
             </table>
         </section>
         <section role="region">
-            <h3>Conformité</h3>
+            <h2>Conformité</h2>
             <table id="tableau_conformite">
                 <caption>Tableau des 3 niveaux de conformité WCAG 2.1</caption>
                 <thead>
@@ -180,18 +180,18 @@
                     </tr>
                 </tbody>
             </table>
-            <p>Vous pouvez tester la lecture des 2 tableaux avec JAWS ou NVDA pour voir s'ils sont accessibles !<br>
-                WCAG 2.1 en VO</p>
+            <p>Vous pouvez tester la lecture des 2 tableaux avec JAWS ou NVDA pour voir s'ils sont accessibles !</p>
+            <a href="https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1" id="vo_wcag">WCAG 2.1 en VO</a>
         </section>
         <section>
-            <figure>
             <h2>Most common WCAG failures by WebAIM<br></h2>
+            <figure> 
             <figcaption>Graphique des échecs les plus courants par WebAIM</figcaption>
-            <img src="/images/WebAIM_million.png" alt="Graphique des echècs les plus communs du WCAG">
+            <img src="/images/WebAIM_million.png" alt="Graphique des echècs les plus communs du WCAG" id="img_wcag_failures">
         </figure>
         </section>
-        <section role="region">
-            <h3>Échecs et accessibilité</h3>
+        <section role="region" id="section_echecs_accessibilite">
+            <h2>Échecs et accessibilité</h2>
             <table id="tableau_echecs_possibilite">
                 <caption>Tableau des échecs les plus courants concernant l'accessibilité numérique</caption>
                 <thead>
