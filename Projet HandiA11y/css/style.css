@@ -49,12 +49,12 @@ li{
 
 section{
     display: flex;
-    flex-flow: row wrap;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
     margin-bottom: 40px;
     max-width: 80%;
+    flex-direction: column;
 }
 
 
@@ -68,6 +68,7 @@ article{
     border-radius: 5px;
     background-color: #9bc9f7;
     min-width: 15rem;
+    width: 23%;
     margin: 10px;
     padding: 10px;
     height: auto;
@@ -82,6 +83,20 @@ article{
     padding: 15px;
 }
 
+#section_description{
+    width: 40%;
+}
+
+#div_principes{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#section_principes{
+    min-width: 240px;
+}
 
 h1,h2,h3{
     text-align: center;
@@ -116,6 +131,10 @@ footer{
     background-color: #0065d1;
     height: 100px;
     text-align: center;
+}
+
+#img_wcag_failures{
+    width: 100%;
 }
 
 *{
