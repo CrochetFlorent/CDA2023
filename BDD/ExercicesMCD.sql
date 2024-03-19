@@ -41,7 +41,7 @@ CREATE TABLE evaluation(id_etudiant int NOT NULL,id_matiere INT NOT NULL,note in
 -- CREATE TABLE Article(CodeA INT(16) AUTO_INCREMENT, NomA VARCHAR(30) NOT NULL, TypeA  VARCHAR(30) NOT NULL,
 -- PRIMARY KEY	(CodeA));
 -- 
--- CREATE TABLE Vente(CodeM INT(16) NOT NULL,NomR VARCHAR(30) NOT NULL,CodeA INT(16) NOT NULL,quantités CHAR(3) NOT NULL,
+-- CREATE TABLE Veetudiant2nte(CodeM INT(16) NOT NULL,NomR VARCHAR(30) NOT NULL,CodeA INT(16) NOT NULL,quantités CHAR(3) NOT NULL,
 -- FOREIGN KEY (CodeM) REFERENCES magasin(CodeM),
 -- FOREIGN KEY (CodeA) REFERENCES article(CodeA),
 -- FOREIGN KEY (NomR) REFERENCES rayon(NomR));
@@ -68,8 +68,5 @@ CREATE TABLE evaluation(id_etudiant int NOT NULL,id_matiere INT NOT NULL,note in
 -- 
 -- CREATE TABLE acheter(num_vin INT NOT NULL, num_com INT NOT NULL,quantite CHAR(3) NOT NULL,
 -- FOREIGN KEY	(num_vin) REFERENCES vin(num_vin),
--- FOREIGN KEY	(num_com) REFERENCES commande(num_com));acheter
-
-
-
+-- FOREIGN KEY	(num_com) REFERENCES commande(num_com));
 
