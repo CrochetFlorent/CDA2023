@@ -1,0 +1,10 @@
+name: fcrochet-fil-rouge
+services:
+  apache:
+    image: httpd
+    container_name: fcrochet-httpd
+    restart: always
+    volumes: 
+    - './www/:/usr/local/apache2/htdocs'
+    ports: 
+    - '3000:80'
