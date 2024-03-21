@@ -65,6 +65,7 @@ function createIndicators(_indicatorsDiv){
         myIndicator.setAttribute("data-bs-target","#carouselExampleDark");
         myIndicator.setAttribute("data-bs-slide-to",""+(index-1)+"");
         myIndicator.setAttribute("aria-label","Slide "+(index));
+        myIndicator.classList.add("filter-invert");
 
         _indicatorsDiv.appendChild(myIndicator);
     }
