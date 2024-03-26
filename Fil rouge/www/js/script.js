@@ -1,6 +1,6 @@
 async function getJSON()
 {
-    const response = await fetch("../www/json/listing.json")
+    const response = await fetch("../json/listing.json")
     const datas = await response.json();
     return datas;
 }
@@ -28,7 +28,7 @@ async function createCarousel(_innerDiv)
         let maDivCaption = document.createElement("div");
         maDivCaption.classList.add("carousel-caption","d-none","d-md-block","bg-body","bg-opacity-50","rounded-5");
 
-        img.setAttribute("src","/www/img_slider_modif/fond"+dataJSON.datas[index].id+".jpg");
+        img.setAttribute("src","/img_slider_modif/fond"+dataJSON.datas[index].id+".jpg");
         img.setAttribute("alt","...");
         maDivItem.appendChild(img);
         
